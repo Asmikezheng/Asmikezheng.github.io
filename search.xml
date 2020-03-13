@@ -1,10 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo-github个人博客搭建</title>
+    <url>/2020/03/13/first/</url>
+    <content><![CDATA[<h1 id="hexo-github个人博客搭建"><a href="#hexo-github个人博客搭建" class="headerlink" title="hexo-github个人博客搭建"></a>hexo-github个人博客搭建</h1><blockquote>
+<p>作为经过两天搭建和调试之后的总结，希望可以帮助到更多的人，同时也作为本站第一篇博客，小激动max</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>github</strong>是一款面向开源和私有（曾经是收费的现在已经可以免费使用）软件软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名GitHub。</p>
+<p><strong>hexo</strong>是一款简洁，高效（只有三行代码就可以把博客部署到远端）的博客框架，并且有很多插件可以使用。</p>
+<p><strong>优缺点</strong>关于github的登录和浏览有的时候可能因为万里长城的原因而有些慢，但是托管在github上移动方便，还省心。</p>
+<p><strong>准备工作</strong>：</p>
+<blockquote>
+<p><strong>注</strong>：本文是在win10系统下进行操作</p>
+</blockquote>
+<ul>
+<li><strong>首先要注册一个github账号</strong></li>
+<li><strong>下载node.js</strong><a href="https://nodejs.org" target="_blank" rel="noopener">这里</a>，<strong>进入界面后点击第一个大的绿色框框，是指的node的长期支持版，下载好之后安装在任意位置</strong></li>
+<li><strong>下载git</strong><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">这里</a>，</li>
+</ul>
+<blockquote>
+<p><strong>那让我们开始吧</strong></p>
+</blockquote>
+<h3 id="1-进入命令管理器"><a href="#1-进入命令管理器" class="headerlink" title="1. 进入命令管理器"></a>1. 进入命令管理器</h3><h4 id="win-R后在弹窗中输入cmd"><a href="#win-R后在弹窗中输入cmd" class="headerlink" title="win+R后在弹窗中输入cmd"></a>win+R后在弹窗中输入cmd</h4><p>输入<code>node -v</code>可以查看到之前安装的node版本信息，证明安装成功，如图我的版本是10.16.0：<br><img src="https://raw.githubusercontent.com/Asmikezheng/photo/hexo/node.png" alt="node"></p>
+<p>接下来在cmd中继续输入<br><code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code> 这里为什么是淘宝的呢？因为国内的直接下载比较慢，用淘宝的镜像相对来说会快一些。然后输入<code>cnpm -v</code>会弹出其版本号，证明安装成功。</p>
+<blockquote>
+<p><strong>注</strong>：这里可能会比较慢，甚至安装不成功，这是因为丢包等原因，所以可以多试几次</p>
+</blockquote>
+<p>继续输入<code>cnpm install -g hexo-cli</code>安装hexo，等待完成后同样输入<code>hexo -v</code>可以看到其版本号如图：<br><img src="https://raw.githubusercontent.com/Asmikezheng/photo/hexo/hexo.png" alt="hexo"></p>
+<h3 id="2-在你喜欢的目录下搭建博客"><a href="#2-在你喜欢的目录下搭建博客" class="headerlink" title="2.在你喜欢的目录下搭建博客"></a>2.在你喜欢的目录下搭建博客</h3><h4 id="2-1创建文件夹"><a href="#2-1创建文件夹" class="headerlink" title="2.1创建文件夹"></a>2.1创建文件夹</h4><ul>
+<li><p><strong>通过鼠标右键创建新文件夹命名为喜欢的名字，我就命名为blog好了</strong><br>这时候接下来的大部分操作都是对这个文件夹里即将出现的文件进行操作，之后出现的问题，解决无果可以直接把这个文件夹删掉重新来过。</p>
+</li>
+<li><p><strong>通过cmd界面进入这个文件夹</strong><br><code>cd blog</code>就可以进入目录。输入<code>hexo init</code>之后等待一段时间，就会发现blog文件夹中多出了很多文件，这些就是hexo自动为你搭建起来的基础博客框架。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>注</strong>这里如果没有反应的话可以点进blog文件夹，右键后选择Git Bash here，而后输入<code>hexo init</code>也可以实现目标</p>
+</blockquote>
+<p><strong>这样博客的基础框架就已经在本地搭建完成啦。这时候接着输入<code>hexo start</code>可以启动本地预览功能如图：(不要理会中间那好几行黄字的WARN，重点在最后一行)</strong></p>
+<p><img src="https://raw.githubusercontent.com/Asmikezheng/photo/hexo/hexostart.png" alt="hexostart"></p>
+<h4 id="这时候打开浏览器输入最后一行的网址http-localhost-4000，就可以本地预览搭建好的博客啦。"><a href="#这时候打开浏览器输入最后一行的网址http-localhost-4000，就可以本地预览搭建好的博客啦。" class="headerlink" title="这时候打开浏览器输入最后一行的网址http://localhost:4000，就可以本地预览搭建好的博客啦。"></a><strong>这时候打开浏览器输入最后一行的网址<a href="http://localhost:4000，就可以本地预览搭建好的博客啦。">http://localhost:4000，就可以本地预览搭建好的博客啦。</a></strong></h4><blockquote>
+<p>最后按Ctrl+c，然后按y，然后回车就可以结束进程</p>
+</blockquote>
+<h4 id="2-2写自己的第一篇博客"><a href="#2-2写自己的第一篇博客" class="headerlink" title="2.2写自己的第一篇博客"></a>2.2写自己的第一篇博客</h4><ul>
+<li><p>可以在网上搜索各种支持markdown的编辑器，比如我使用的是<a href="https://maxiang.io/" target="_blank" rel="noopener">马克飞象</a>，按照markdown语法写下，直接复制到<code>blog\source\_posts</code>目录下的一个文本编辑器中。</p>
+</li>
+<li><p>其中有一篇hexo自动生成的<code>helloword</code>文件，也就是刚刚打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 看到的那篇。</p>
+</li>
+<li><p>然后再命令行中输入<code>hexo g</code>使得hexo生成静态网页，然后输入<code>hexo s</code>就又回到上一张图片处，但是不同的是在博客中出现了一篇<strong>新的博文</strong>。</p>
+</li>
+</ul>
+<p><strong>是不是很惊喜，就是这么的简单</strong></p>
+<blockquote>
+<p><strong>注1</strong>：<strong>本地预览</strong>是为了先看到博文的样子，对于错误进行自查和修改<br><strong>注2</strong>：结束的方式是<code>ctrl+c</code>然后再按Y键</p>
+</blockquote>
+<h3 id="3-将本地的hexo和github联系起来"><a href="#3-将本地的hexo和github联系起来" class="headerlink" title="3.将本地的hexo和github联系起来"></a>3.将本地的hexo和github联系起来</h3><h4 id="3-1登录github与新建仓库"><a href="#3-1登录github与新建仓库" class="headerlink" title="3.1登录github与新建仓库"></a>3.1登录github与新建仓库</h4><p>登录github后点击Repositories，位置如图，建立一个新的仓库（右边有一个绿色的new的按钮就是新建仓库）：<br><img src="https://raw.githubusercontent.com/Asmikezheng/photo/hexo/block.png" alt=""></p>
+<blockquote>
+<p><strong>注</strong>这里一定要注意用户部署个人博客的github仓库的命名必须符合特定要求才行，必须是<code>用户名.github.io</code></p>
+</blockquote>
+<p>下边都默认就好</p>
+<p>然后回到命令行中输入<code>cnpm install --save hexo-deployer-git</code>安装一个git的部署的插件</p>
+<h4 id="3-2设置关联"><a href="#3-2设置关联" class="headerlink" title="3.2设置关联"></a>3.2设置关联</h4><p>用文本编辑器打开blog文件夹里的<code>_config.yml</code>文件拉到最后输入</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  type: <span class="string">'git'</span></span><br><span class="line">  repo: https://github.com/你的github用户名/你的github用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注</strong>：其中第五行git必须在引号之<strong>内</strong>，并且冒号之后有一个<strong>空格</strong></p>
+</blockquote>
+<h4 id="3-3-将本地博客推向远端"><a href="#3-3-将本地博客推向远端" class="headerlink" title="3.3 将本地博客推向远端"></a>3.3 将本地博客推向远端</h4><p>在命令行中输入<code>hexo d</code>在下边的提示中输入github的账号和密码，等待一下</p>
+<blockquote>
+<p><strong>注</strong>：这里要是报错（git没有global身份）的话回到Git界面输入<code>git config --global user.name</code>再输入<code>git config --global user.email</code>“xxx@xxx”</p>
+</blockquote>
+<p>然后在github之前新建的仓库中就能看到一些文件啦，其实就是blog文件夹中的文件上传到github上</p>
+<p><strong>这时候输入<a href="http://user.github.io就可以进入远端的博客啦" target="_blank" rel="noopener">http://user.github.io就可以进入远端的博客啦</a></strong></p>
+<h3 id="以上就是搭建一个hexo-github博客的全部啦，散花"><a href="#以上就是搭建一个hexo-github博客的全部啦，散花" class="headerlink" title="以上就是搭建一个hexo-github博客的全部啦，散花"></a><strong>以上就是搭建一个hexo-github博客的全部啦，散花</strong></h3>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/03/12/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<p>&lt;! –more–&gt;</p>
+<a id="more"></a>
+
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>

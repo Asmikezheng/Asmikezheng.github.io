@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-13T06:18:12.461Z</updated>
+  <updated>2020-03-13T09:42:54.242Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo-github个人博客搭建</title>
+    <link href="http://yoursite.com/2020/03/13/first/"/>
+    <id>http://yoursite.com/2020/03/13/first/</id>
+    <published>2020-03-13T07:19:33.246Z</published>
+    <updated>2020-03-13T09:42:54.242Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;hexo-github个人博客搭建&quot;&gt;&lt;a href=&quot;#hexo-github个人博客搭建&quot; class=&quot;headerlink&quot; title=&quot;hexo-github个人博客搭建&quot;&gt;&lt;/a&gt;hexo-github个人博客搭建&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;作为经过两天搭建和调试之后的总结，希望可以帮助到更多的人，同时也作为本站第一篇博客，小激动max&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2020/03/12/hello-world/"/>
     <id>http://yoursite.com/2020/03/12/hello-world/</id>
     <published>2020-03-12T13:36:22.839Z</published>
-    <updated>2020-03-13T06:18:12.461Z</updated>
+    <updated>2020-03-13T08:07:16.321Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
