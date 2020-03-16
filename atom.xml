@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-13T09:42:54.242Z</updated>
+  <updated>2020-03-16T10:28:53.311Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>树莓派初体验</title>
+    <link href="http://yoursite.com/2020/03/16/Raspberryfirst/"/>
+    <id>http://yoursite.com/2020/03/16/Raspberryfirst/</id>
+    <published>2020-03-16T03:56:22.632Z</published>
+    <updated>2020-03-16T10:28:53.311Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;树莓派（不是一种食物）&quot;&gt;&lt;a href=&quot;#树莓派（不是一种食物）&quot; class=&quot;headerlink&quot; title=&quot;树莓派（不是一种食物）&quot;&gt;&lt;/a&gt;树莓派（不是一种食物）&lt;/h1&gt;&lt;h4 id=&quot;关于树莓派系统搭建和开机&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Raspberry" scheme="http://yoursite.com/categories/Raspberry/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>hexo-github个人博客搭建</title>
-    <link href="http://yoursite.com/2020/03/13/first/"/>
-    <id>http://yoursite.com/2020/03/13/first/</id>
+    <link href="http://yoursite.com/2020/03/13/hexofirst/"/>
+    <id>http://yoursite.com/2020/03/13/hexofirst/</id>
     <published>2020-03-13T07:19:33.246Z</published>
-    <updated>2020-03-13T09:42:54.242Z</updated>
+    <updated>2020-03-16T04:00:47.793Z</updated>
     
     <summary type="html">
     
@@ -38,11 +63,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
+    <title>纪念丹尼斯.里奇--一切源于hello World</title>
     <link href="http://yoursite.com/2020/03/12/hello-world/"/>
     <id>http://yoursite.com/2020/03/12/hello-world/</id>
     <published>2020-03-12T13:36:22.839Z</published>
-    <updated>2020-03-13T08:07:16.321Z</updated>
+    <updated>2020-03-16T04:00:25.886Z</updated>
     
     <summary type="html">
     

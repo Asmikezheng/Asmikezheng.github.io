@@ -296,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/13/first/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/16/Raspberryfirst/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mikezheng">
@@ -315,7 +315,217 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/13/first/" itemprop="url">hexo-github个人博客搭建</a></h1>
+                <a class="post-title-link" href="/2020/03/16/Raspberryfirst/" itemprop="url">树莓派初体验</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-16T11:56:22+08:00">
+                2020-03-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Raspberry/" itemprop="url" rel="index">
+                    <span itemprop="name">Raspberry</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="树莓派（不是一种食物）"><a href="#树莓派（不是一种食物）" class="headerlink" title="树莓派（不是一种食物）"></a>树莓派（不是一种食物）</h1><h4 id="关于树莓派系统搭建和开机"><a href="#关于树莓派系统搭建和开机" class="headerlink" title="关于树莓派系统搭建和开机"></a>关于树莓派系统搭建和开机</h4><blockquote>
+<p>本文基于win10系统，针对树莓派4B的系统搭建（同时适用于树莓派3B和3B+）</p>
+</blockquote>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>树莓派</strong>英文名(Raspberry Pi)，是为计算机编程而设计的只有手掌大小的卡片式电脑，其系统基于Linux。随着Windows 10 IoT的发布，我们也可以使用运行Windows系统的树莓派。</p>
+<p><strong>树莓派到底能干什么</strong><br>Our mission is to put the power of computing and digital making into the hands of people all over the world. We do this so that more people are able to harness the power of computing and digital technologies for work, to solve problems that matter to them, and to express themselves creatively.                                         ——<a href="https://www.raspberrypi.org/" target="_blank" rel="noopener">树莓派官网</a></p>
+<hr>
+<p><strong>树莓派型号对比</strong><br>| 名称  | Raspberry Pi 3B  | Raspberry Pi 3B+  | Raspberry Pi 4B |<br>| :——– | ——–:| :–: |<br>| SOC      | Broadcom BCM2837 | Broadcom BCM2837B0 | Broadcom BCM2711  |<br>| CPU      | 64-位 1.2GHz四核  | 64-位 1.4GHz四核    | 64-位 1.5GHz四核   |<br>| GPU      | BVC IV@400MHz    | BVC IV@400MHz      | BVC VI@500MHz     |<br>| 蓝牙      |  蓝牙4.1          | 蓝牙4.2            | 蓝牙5.0            |<br>| USB接口   | USB2.0<em>4        | USB2.0</em>4             | USB2.0<em>2/USB3.0</em>2 |<br>| HDMI      | 标准HDMI<em>1       | 标准HDMI</em>1          | micro HDMI*2支持4k60|<br>| 有线网络   | 10/100Mb/s以太网 | USB 2.0千兆以太网 | 真千兆以太网(网口可达) |<br>| 以太网Poe  | 无              | 通过额外的HAT以太网供电 | 通过额外的HAT以太网供电 |</p>
+<blockquote>
+<p>ps.通过上图我觉得是等等党的胜利hhh</p>
+</blockquote>
+<hr>
+<p><strong>准备工作</strong>：</p>
+<ul>
+<li><strong>准备一张空的SD卡，官方推荐是8G以上</strong></li>
+<li><strong>一根网线</strong></li>
+<li>*<em>格式化工具SDFormatter *</em>：在<a href="https://www.sdcard.org/downloads/formatter/eula_windows/" target="_blank" rel="noopener">这里</a>下载（滑到最下边点击accept接受协议可下载)</li>
+<li><strong>烧写镜像的工具Win32DiskImager</strong>：在<a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">这里</a>下载</li>
+</ul>
+<blockquote>
+<p>那让我们开始吧</p>
+</blockquote>
+<h3 id="1-树莓派官方镜像的下载与安装"><a href="#1-树莓派官方镜像的下载与安装" class="headerlink" title="1. 树莓派官方镜像的下载与安装"></a>1. 树莓派官方镜像的下载与安装</h3><h4 id="1-1树莓派官方镜像"><a href="#1-1树莓派官方镜像" class="headerlink" title="1.1树莓派官方镜像"></a>1.1树莓派官方镜像</h4><p>进入<a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="noopener">树莓派官网</a>的下载界面，下边给出了树莓派的两种官方推荐的操作系统，分别是Raspberry和Noobs，我们选择前者进行安装，点击进入后我们选择第一个，如图：<br><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/raspberrysystem.png" alt="raspberry"><br>因为里边预装了Python，Java，Scratch等编程教育软件和图形化桌面。</p>
+<p>下载好本地解压之后我们得到了一个<code>.img</code>的镜像文件</p>
+<blockquote>
+<p><strong>注</strong>：如果还是压缩文件或者不能正常显示，说明是压缩软件本身需要设计，进入压缩软件设置界面，如图将img文件前的对勾去掉。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/select.png" style="zoom:50%" ></div>
+</blockquote>
+<h4 id="1-2镜像的烧写"><a href="#1-2镜像的烧写" class="headerlink" title="1.2镜像的烧写"></a>1.2镜像的烧写</h4><ul>
+<li>将sd卡插入电脑，使用专门的格式化工具SDFormatter，格式化内存卡。</li>
+<li>将已经下载好的Win32DiskImager安装后运行</li>
+</ul>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/win32disk.png" style="zoom:80%" ><div>
+
+<ul>
+<li>1处选择之前下载好的镜像文件，2处选择SD卡，3前两步选好后，点击write开始烧写。</li>
+<li>等待烧录完成，拔掉SD卡，插入树莓派上电，系统会自动安装完成。</li>
+</ul>
+<blockquote>
+<p><strong>注</strong>：烧录完成后，win系统可能会因为无法识别Linux分区格式而提示用户格式化，此时不要点格式化！不要点格式化！不要点格式化！直接点取消就可以了。如果点了格式化，树莓派会因为丢失系统文件而无法开机，需要重新烧录IMG镜像文件。</p>
+</blockquote>
+<h4 id="此时树莓派的安装系统已经完成，如果有显示的同学可直接进入树莓派系统"><a href="#此时树莓派的安装系统已经完成，如果有显示的同学可直接进入树莓派系统" class="headerlink" title="此时树莓派的安装系统已经完成，如果有显示的同学可直接进入树莓派系统"></a>此时树莓派的安装系统已经完成，如果有显示的同学可直接进入树莓派系统</h4><hr>
+<blockquote>
+<p>以下内容针对没有显示屏的同学</p>
+</blockquote>
+<h3 id="2-我们来远程登录树莓派"><a href="#2-我们来远程登录树莓派" class="headerlink" title="2.我们来远程登录树莓派"></a>2.我们来远程登录树莓派</h3><h4 id="2-1准备工作"><a href="#2-1准备工作" class="headerlink" title="2.1准备工作"></a>2.1准备工作</h4><p>我们将SD卡再插入电脑，打开SD卡盘符新建ssh文件（因为自2016年9月开始，raspberry默认关闭ssh连接）</p>
+<blockquote>
+<p><strong>注</strong>：这里是文件，而不是文本文件，删除其后缀的办法是打开<strong>控制面板</strong> \ <strong>文件资源管理器选项</strong> \ <strong>查看</strong>，取消勾选隐藏已知文件类型的拓展名，点确定，如图然后再将ssh后边新多出的<code>.txt</code>删除 <div  align="center"><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/text.png" style="zoom:50%"><div></p>
+</blockquote>
+<h4 id="2-2正式开始"><a href="#2-2正式开始" class="headerlink" title="2.2正式开始"></a>2.2正式开始</h4><ul>
+<li>首先将树莓派通过网线连接至路由器</li>
+<li>在笔记本电脑中打开：控制面板 \ 网络和共享中心 \ 更改适配器设置，找到无线网络连接右键“属性”，在共享选项卡上选中“允许其他网络用户通过此计算机的Internet连接来连接（N）”选项,如图，点确定。</li>
+</ul>
+<div  align="center"><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/win10int.png" style="zoom:50%"><div>
+
+<ul>
+<li>而后进入路由器的管理员界面，我用的是TP-Link，所以其管理员网址为<a href="http://tplogin.cn/" target="_blank" rel="noopener">http://tplogin.cn/</a> 登录后在设备管理界面找到树莓派，如图，查看其IP，我的树莓派IP是192.168.1.100</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/raspberryip1.png" alt="raspberry1"><br><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/raspberryip2.png" alt="raspberry2"></p>
+<ul>
+<li>使用Putty或者Xshell远程登录，在IP处输入已获取的树莓派的IP，选择22号端口，单击open即可进入Raspbian的命令行界面。</li>
+</ul>
+<blockquote>
+<p>初始用户名：pi<br>初始密码：raspberry</p>
+</blockquote>
+<h3 id="3-VNC远程桌面"><a href="#3-VNC远程桌面" class="headerlink" title="3.VNC远程桌面"></a>3.VNC远程桌面</h3><p>首先在电脑上安装VNC viewer<a href="https://www.realvnc.com/en/connect/download/viewer/" target="_blank" rel="noopener">这里</a>。而后启动PC端的VNC Viewer输入树莓派的IP和链接密码即可进入树莓派的操作界面。如图：</p>
+<p><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/end.png" alt="end"></p>
+<p>###<strong>散花</strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/13/hexofirst/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mikezheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mikezheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/13/hexofirst/" itemprop="url">hexo-github个人博客搭建</a></h1>
         
 
         <div class="post-meta">
@@ -395,7 +605,7 @@
 </blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/13/first/#more" rel="contents">
+            <a class="btn" href="/2020/03/13/hexofirst/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -465,7 +675,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/12/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2020/03/12/hello-world/" itemprop="url">纪念丹尼斯.里奇--一切源于hello World</a></h1>
         
 
         <div class="post-meta">
@@ -631,7 +841,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -642,7 +852,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -724,7 +934,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.4k字</span>
+  <span class="post-count">博客全站共2.7k字</span>
 </div>
 
 
