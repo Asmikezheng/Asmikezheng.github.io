@@ -6,10 +6,70 @@
     <content><![CDATA[<h1 id="树莓派（不是一种食物）"><a href="#树莓派（不是一种食物）" class="headerlink" title="树莓派（不是一种食物）"></a>树莓派（不是一种食物）</h1><h4 id="关于树莓派系统搭建和开机"><a href="#关于树莓派系统搭建和开机" class="headerlink" title="关于树莓派系统搭建和开机"></a>关于树莓派系统搭建和开机</h4><blockquote>
 <p>本文基于win10系统，针对树莓派4B的系统搭建（同时适用于树莓派3B和3B+）</p>
 </blockquote>
+<a id="more"></a>
+
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>树莓派</strong>英文名(Raspberry Pi)，是为计算机编程而设计的只有手掌大小的卡片式电脑，其系统基于Linux。随着Windows 10 IoT的发布，我们也可以使用运行Windows系统的树莓派。</p>
 <p><strong>树莓派到底能干什么</strong><br>Our mission is to put the power of computing and digital making into the hands of people all over the world. We do this so that more people are able to harness the power of computing and digital technologies for work, to solve problems that matter to them, and to express themselves creatively.                                         ——<a href="https://www.raspberrypi.org/" target="_blank" rel="noopener">树莓派官网</a></p>
 <hr>
-<p><strong>树莓派型号对比</strong><br>| 名称  | Raspberry Pi 3B  | Raspberry Pi 3B+  | Raspberry Pi 4B |<br>| :——– | ——–:| :–: |<br>| SOC      | Broadcom BCM2837 | Broadcom BCM2837B0 | Broadcom BCM2711  |<br>| CPU      | 64-位 1.2GHz四核  | 64-位 1.4GHz四核    | 64-位 1.5GHz四核   |<br>| GPU      | BVC IV@400MHz    | BVC IV@400MHz      | BVC VI@500MHz     |<br>| 蓝牙      |  蓝牙4.1          | 蓝牙4.2            | 蓝牙5.0            |<br>| USB接口   | USB2.0<em>4        | USB2.0</em>4             | USB2.0<em>2/USB3.0</em>2 |<br>| HDMI      | 标准HDMI<em>1       | 标准HDMI</em>1          | micro HDMI*2支持4k60|<br>| 有线网络   | 10/100Mb/s以太网 | USB 2.0千兆以太网 | 真千兆以太网(网口可达) |<br>| 以太网Poe  | 无              | 通过额外的HAT以太网供电 | 通过额外的HAT以太网供电 |</p>
+<p><strong>树莓派型号对比</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">Raspberry Pi 3B</th>
+<th align="center">Raspberry Pi 3B+</th>
+<th align="center">Raspberry Pi 4B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">SOC</td>
+<td align="center">Broadcom BCM2837</td>
+<td align="center">Broadcom BCM2837B0</td>
+<td align="center">Broadcom BCM2711</td>
+</tr>
+<tr>
+<td align="center">CPU</td>
+<td align="center">64-位 1.2GHz四核</td>
+<td align="center">64-位 1.4GHz四核</td>
+<td align="center">64-位 1.5GHz四核</td>
+</tr>
+<tr>
+<td align="center">GPU</td>
+<td align="center">BVC IV@400MHz</td>
+<td align="center">BVC IV@400MHz</td>
+<td align="center">BVC VI@500MHz</td>
+</tr>
+<tr>
+<td align="center">蓝牙</td>
+<td align="center">蓝牙4.1</td>
+<td align="center">蓝牙4.2</td>
+<td align="center">蓝牙5.0</td>
+</tr>
+<tr>
+<td align="center">USB接口</td>
+<td align="center">USB2.0*4</td>
+<td align="center">USB2.0*4</td>
+<td align="center">USB2.0<em>2/USB3.0</em>2</td>
+</tr>
+<tr>
+<td align="center">HDMI</td>
+<td align="center">标准HDMI*1</td>
+<td align="center">标准HDMI*1</td>
+<td align="center">micro HDMI*2支持4k60</td>
+</tr>
+<tr>
+<td align="center">有线网络</td>
+<td align="center">10/100Mb/s以太网</td>
+<td align="center">USB 2.0千兆以太网</td>
+<td align="center">真千兆以太网(网口可达)</td>
+</tr>
+<tr>
+<td align="center">以太网Poe</td>
+<td align="center">无</td>
+<td align="center">通过额外的HAT以太网供电</td>
+<td align="center">通过额外的HAT以太网供电</td>
+</tr>
+</tbody></table>
 <blockquote>
 <p>ps.通过上图我觉得是等等党的胜利hhh</p>
 </blockquote>
@@ -18,7 +78,7 @@
 <ul>
 <li><strong>准备一张空的SD卡，官方推荐是8G以上</strong></li>
 <li><strong>一根网线</strong></li>
-<li>*<em>格式化工具SDFormatter *</em>：在<a href="https://www.sdcard.org/downloads/formatter/eula_windows/" target="_blank" rel="noopener">这里</a>下载（滑到最下边点击accept接受协议可下载)</li>
+<li><strong>格式化工具SDFormatter</strong>：在<a href="https://www.sdcard.org/downloads/formatter/eula_windows/" target="_blank" rel="noopener">这里</a>下载（滑到最下边点击accept接受协议可下载)</li>
 <li><strong>烧写镜像的工具Win32DiskImager</strong>：在<a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">这里</a>下载</li>
 </ul>
 <blockquote>
@@ -34,7 +94,7 @@
 <li>将sd卡插入电脑，使用专门的格式化工具SDFormatter，格式化内存卡。</li>
 <li>将已经下载好的Win32DiskImager安装后运行</li>
 </ul>
-<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/win32disk.png" style="zoom:80%" ><div>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/win32disk.png" style="zoom:80%" ></div>
 
 <ul>
 <li>1处选择之前下载好的镜像文件，2处选择SD卡，3前两步选好后，点击write开始烧写。</li>
@@ -49,13 +109,13 @@
 </blockquote>
 <h3 id="2-我们来远程登录树莓派"><a href="#2-我们来远程登录树莓派" class="headerlink" title="2.我们来远程登录树莓派"></a>2.我们来远程登录树莓派</h3><h4 id="2-1准备工作"><a href="#2-1准备工作" class="headerlink" title="2.1准备工作"></a>2.1准备工作</h4><p>我们将SD卡再插入电脑，打开SD卡盘符新建ssh文件（因为自2016年9月开始，raspberry默认关闭ssh连接）</p>
 <blockquote>
-<p><strong>注</strong>：这里是文件，而不是文本文件，删除其后缀的办法是打开<strong>控制面板</strong> \ <strong>文件资源管理器选项</strong> \ <strong>查看</strong>，取消勾选隐藏已知文件类型的拓展名，点确定，如图然后再将ssh后边新多出的<code>.txt</code>删除 <div  align="center"><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/text.png" style="zoom:50%"><div></p>
+<p><strong>注</strong>：这里是文件，而不是文本文件，删除其后缀的办法是打开<strong>控制面板</strong> \ <strong>文件资源管理器选项</strong> \ <strong>查看</strong>，取消勾选隐藏已知文件类型的拓展名，点确定，如图然后再将ssh后边新多出的<code>.txt</code>删除 <div  align="center"><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/text.png" style="zoom:50%"></div></p>
 </blockquote>
 <h4 id="2-2正式开始"><a href="#2-2正式开始" class="headerlink" title="2.2正式开始"></a>2.2正式开始</h4><ul>
 <li>首先将树莓派通过网线连接至路由器</li>
 <li>在笔记本电脑中打开：控制面板 \ 网络和共享中心 \ 更改适配器设置，找到无线网络连接右键“属性”，在共享选项卡上选中“允许其他网络用户通过此计算机的Internet连接来连接（N）”选项,如图，点确定。</li>
 </ul>
-<div  align="center"><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/win10int.png" style="zoom:50%"><div>
+<div  align="center"><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/win10int.png" style="zoom:50%"></div>
 
 <ul>
 <li>而后进入路由器的管理员界面，我用的是TP-Link，所以其管理员网址为<a href="http://tplogin.cn/" target="_blank" rel="noopener">http://tplogin.cn/</a> 登录后在设备管理界面找到树莓派，如图，查看其IP，我的树莓派IP是192.168.1.100</li>
@@ -69,8 +129,7 @@
 </blockquote>
 <h3 id="3-VNC远程桌面"><a href="#3-VNC远程桌面" class="headerlink" title="3.VNC远程桌面"></a>3.VNC远程桌面</h3><p>首先在电脑上安装VNC viewer<a href="https://www.realvnc.com/en/connect/download/viewer/" target="_blank" rel="noopener">这里</a>。而后启动PC端的VNC Viewer输入树莓派的IP和链接密码即可进入树莓派的操作界面。如图：</p>
 <p><img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/end.png" alt="end"></p>
-<p>###<strong>散花</strong></p>
-]]></content>
+<h3 id="散花"><a href="#散花" class="headerlink" title="散花"></a>散花</h3>]]></content>
       <categories>
         <category>Raspberry</category>
       </categories>
