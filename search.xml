@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo美化--next主题</title>
+    <url>/2020/04/06/nextthemefirst/</url>
+    <content><![CDATA[<h1 id="hexo美化–next主题"><a href="#hexo美化–next主题" class="headerlink" title="hexo美化–next主题"></a>hexo美化–next主题</h1><h4 id="这里我们已经搭建起我们的个人博客了，那么让它赏心悦目便提上了日程。"><a href="#这里我们已经搭建起我们的个人博客了，那么让它赏心悦目便提上了日程。" class="headerlink" title="这里我们已经搭建起我们的个人博客了，那么让它赏心悦目便提上了日程。"></a><a href="https://asmikezheng.github.io/2020/03/13/hexofirst/#more" target="_blank" rel="noopener">这里</a>我们已经搭建起我们的个人博客了，那么让它赏心悦目便提上了日程。</h4><blockquote>
+<p>产生快感的叫做美，产生不快感的叫做丑。                             ——沃尔夫</p>
+</blockquote>
+<a id="more"></a>
+
+<p><strong>好看又好用的主题推荐</strong>：界面很美的Sakura和Butterfly，3-hexo适合博文比较多的同学，以及我们今天的主角next，插件很多并且简洁</p>
+<blockquote>
+<p>那让我们开始吧</p>
+</blockquote>
+<h3 id="1-首先咱们先来看看它的官方网站的使用说明"><a href="#1-首先咱们先来看看它的官方网站的使用说明" class="headerlink" title="1. 首先咱们先来看看它的官方网站的使用说明"></a>1. 首先咱们先来看看它的官方网站的使用说明</h3><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">点这里</a>进入其官网的<strong>使用文档</strong>可以看到其中提供了：</p>
+<ul>
+<li>主题的下载与启用</li>
+<li>三种样式的选择和语言的更换</li>
+<li>设置菜单，侧栏，头像，作者昵称和站点描述</li>
+<li>以及第三方服务，如：阅读统计次数等</li>
+</ul>
+<p><strong>有一点需要注意</strong>，如图在<code>主题配置文件</code>中设定菜单内容时，将句首的<code>#</code>删去既是启用这一菜单，让我们看注释</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -&gt; archives).</span></span><br><span class="line"><span class="comment"># Usage: `Key: /link/ || icon`</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target link.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="注意注意注意"><a href="#注意注意注意" class="headerlink" title="注意注意注意"></a>注意注意注意</h2><p><strong>我们可以知道，以<code>categories: /categories/|| th</code>为例，第一个categories是指<code>Usage</code>，第二个是指其目标链接，因此而后的<code>/</code>后边就</strong>不可以<strong>有空格，</strong></p>
+<p><strong>如果有空格则在预览时会出现这样的地址<code>http://localhost:4000/categories/%20/</code>其中<code>/%20</code>就是这个空格造成的，因此要将其删去。</strong></p>
+<hr>
+<p>通过以上的配置已经可以让博客具有更强的实用性和拥有更强大的功能，但是我们还希望让它更活泼，那么接下来的这些设置可能会满足你。</p>
+<h3 id="2-个性化设置"><a href="#2-个性化设置" class="headerlink" title="2. 个性化设置"></a>2. 个性化设置</h3><h4 id="2-1-动态背景"><a href="#2-1-动态背景" class="headerlink" title="2.1 动态背景"></a>2.1 动态背景</h4><p>next主题在5.1.1以上的版本的话只需要打开<code>主题配置文件</code>找到这段代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Canvas-nest</span><br><span class="line">canvas_nest: ture</span><br><span class="line"></span><br><span class="line"># three_waves</span><br><span class="line">three_waves: false</span><br><span class="line"></span><br><span class="line"># canvas_lines</span><br><span class="line">canvas_lines: false</span><br><span class="line"></span><br><span class="line"># canvas_sphere</span><br><span class="line">canvas_sphere: false</span><br></pre></td></tr></table></figure>
+
+<p>这里有四种动态背景的样式，选择自己喜欢的一种把<code>false</code>改成<code>ture</code>即可。</p>
+<h4 id="2-1-打赏功能"><a href="#2-1-打赏功能" class="headerlink" title="2.1 打赏功能"></a>2.1 打赏功能</h4><p>……未完待续</p>
+<blockquote>
+<p>等慢慢更新好了</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>hexo-next主题</title>
+    <url>/2020/03/16/hexo-next/</url>
+    <content><![CDATA[<h1 id="hexo美化–next主题"><a href="#hexo美化–next主题" class="headerlink" title="hexo美化–next主题"></a>hexo美化–next主题</h1><h4 id="这里我们已经搭建起我们的个人博客了，那么让它赏心悦目便提上了日程。"><a href="#这里我们已经搭建起我们的个人博客了，那么让它赏心悦目便提上了日程。" class="headerlink" title="这里我们已经搭建起我们的个人博客了，那么让它赏心悦目便提上了日程。"></a><a href="https://asmikezheng.github.io/2020/03/13/hexofirst/#more" target="_blank" rel="noopener">这里</a>我们已经搭建起我们的个人博客了，那么让它赏心悦目便提上了日程。</h4><blockquote>
+<p>产生快感的叫做美，产生不快感的叫做丑。                             ——沃尔夫</p>
+</blockquote>
+<a id="more"></a>
+
+<p><strong>好看又好用的主题推荐</strong>：界面很美的Sakura和Butterfly，3-hexo适合博文比较多的同学，以及我们今天的主角next，插件很多并且简洁</p>
+<blockquote>
+<p>那让我们开始吧</p>
+</blockquote>
+<h3 id="1-首先咱们先来看看它的官方网站的使用说明"><a href="#1-首先咱们先来看看它的官方网站的使用说明" class="headerlink" title="1. 首先咱们先来看看它的官方网站的使用说明"></a>1. 首先咱们先来看看它的官方网站的使用说明</h3><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">点这里</a>进入其官网的<strong>使用文档</strong>可以看到其中提供了：</p>
+<ul>
+<li>主题的下载与启用</li>
+<li>三种样式的选择和语言的更换</li>
+<li>设置菜单，侧栏，头像，作者昵称和站点描述</li>
+<li>以及第三方服务，如：阅读统计次数等</li>
+</ul>
+<p><strong>有一点需要注意</strong>，如图在<code>主题配置文件</code>中设定菜单内容时，将句首的<code>#</code>删去既是启用这一菜单，让我们看注释</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -&gt; archives).</span></span><br><span class="line"><span class="comment"># Usage: `Key: /link/ || icon`</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target link.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.</span></span><br></pre></td></tr></table></figure>
+<p>我们可以知道，以<code>categories: /categories/|| th</code>为例，第一个categories是指<code>Usage</code>，第二个是指其目标链接，因此而后的<code>/</code>后边就<strong>不可以</strong>有空格，</p>
+<p><strong>如果有空格则在预览时会出现这样的地址<code>http://localhost:4000/categories/%20/</code>其中<code>/%20</code>就是这个空格造成的，因此要将其删去。</strong></p>
+<p>通过以上的配置已经可以让博客具有更强的实用性和拥有更强大的功能，但是我们还希望让它更活泼，那么接下来的这些设置可能会满足你。</p>
+<h3 id="2-个性化设置"><a href="#2-个性化设置" class="headerlink" title="2. 个性化设置"></a>2. 个性化设置</h3><h4 id="2-1-动态背景"><a href="#2-1-动态背景" class="headerlink" title="2.1 动态背景"></a>2.1 动态背景</h4>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>树莓派初体验</title>
     <url>/2020/03/16/Raspberryfirst/</url>
     <content><![CDATA[<h1 id="树莓派（不是一种食物）"><a href="#树莓派（不是一种食物）" class="headerlink" title="树莓派（不是一种食物）"></a>树莓派（不是一种食物）</h1><h4 id="关于树莓派系统搭建和开机"><a href="#关于树莓派系统搭建和开机" class="headerlink" title="关于树莓派系统搭建和开机"></a>关于树莓派系统搭建和开机</h4><blockquote>
