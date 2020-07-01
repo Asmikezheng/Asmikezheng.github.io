@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>controlelectricsystem</title>
+    <title>电力系统分析</title>
     <url>/2020/07/01/controlelectricsystem/</url>
-    <content><![CDATA[<p>##电力系统分析<br>课程分为《<strong>电力系统稳态分析</strong>》和《<strong>电力系统暂态分析</strong>》<br>其中电力系统稳态分析主要介绍</p>
+    <content><![CDATA[<h2 id="电力系统分析"><a href="#电力系统分析" class="headerlink" title="电力系统分析"></a>电力系统分析</h2><p>课程分为《<strong>电力系统稳态分析</strong>》和《<strong>电力系统暂态分析</strong>》<br>其中电力系统稳态分析主要介绍</p>
 <ul>
 <li>电力系统基本概念；</li>
 <li>正常状态下系统各元件参数等值电路；</li>
@@ -17,6 +17,8 @@
 <li>电力系统不对称短路电流分析计算；</li>
 <li>简单电力系统的静态稳定和暂态稳定。</li>
 </ul>
+<a id="more"></a>
+
 <blockquote>
 <p>先从电力系统稳态分析开始学起吧</p>
 </blockquote>
@@ -34,22 +36,22 @@
 <blockquote>
 <p>风电发展的速度超过了其他清洁能源的发展</p>
 </blockquote>
-<h4 id="电力系统组成"><a href="#电力系统组成" class="headerlink" title="电力系统组成"></a>电力系统组成</h4><p>电力系统是由发电厂、</p>
+<h1 id="施工ing"><a href="#施工ing" class="headerlink" title="施工ing"></a>施工ing</h1><h4 id="电力系统组成"><a href="#电力系统组成" class="headerlink" title="电力系统组成"></a>电力系统组成</h4><p>电力系统是由发电厂、</p>
 <h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3>]]></content>
+      <categories>
+        <category>PowerSystemAnalysis</category>
+      </categories>
   </entry>
   <entry>
-    <title>java001</title>
+    <title>Java学习笔记</title>
     <url>/2020/07/01/java001/</url>
-    <content><![CDATA[<h2 id="Java初体验"><a href="#Java初体验" class="headerlink" title="Java初体验"></a>Java初体验</h2><hr>
-<blockquote>
-<p>以下主要来自于动力字节</p>
-</blockquote>
-<hr>
-<blockquote>
+    <content><![CDATA[<h2 id="Java初体验"><a href="#Java初体验" class="headerlink" title="Java初体验"></a>Java初体验</h2><blockquote>
 <p>计算机包括两部分：<br>硬件：鼠标、键盘、显示器、主机箱内部的CPU、内存条、硬盘等…<br><strong>注意</strong>：计算机只有硬件是无法工作的，需要软件驱动硬件才能工作。<br>软件：包括系统软件和应用软件<br><strong>系统软件</strong>：直接和硬件交互的软件，例如：window7，linux操作系统<br><strong>应用软件</strong>：应用软件通常运行在系统软件中，比如QQ运行在windows操作系统上</p>
 </blockquote>
 <p>我们通常说的软件开发一般是指使用计算机编程语言完成<strong>应用程序</strong>的开发</p>
 <p><del>Java是世界上最好的语言</del></p>
+<a id="more"></a>
+
 <hr>
 <h3 id="准备技能"><a href="#准备技能" class="headerlink" title="准备技能"></a>准备技能</h3><h4 id="基本DOS命令"><a href="#基本DOS命令" class="headerlink" title="基本DOS命令"></a>基本DOS命令</h4><ul>
 <li><p>需要复制上边的内容是win10下左键选中直接右键</p>
@@ -172,7 +174,15 @@
 <li>java注释</li>
 <li>public class和class的区别</li>
 </ul>
+<hr>
+<blockquote>
+<p>以上主要来自于动力字节</p>
+</blockquote>
+<hr>
 ]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
   </entry>
   <entry>
     <title>hexo美化--next主题</title>

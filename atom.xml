@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-01T06:39:43.713Z</updated>
+  <updated>2020-07-01T06:53:14.932Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,50 +17,56 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>controlelectricsystem</title>
+    <title>电力系统分析</title>
     <link href="http://yoursite.com/2020/07/01/controlelectricsystem/"/>
     <id>http://yoursite.com/2020/07/01/controlelectricsystem/</id>
     <published>2020-07-01T06:37:51.953Z</published>
-    <updated>2020-07-01T06:39:43.713Z</updated>
+    <updated>2020-07-01T06:53:14.932Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;##电力系统分析&lt;br&gt;课程分为《&lt;strong&gt;电力系统稳态分析&lt;/strong&gt;》和《&lt;strong&gt;电力系统暂态分析&lt;/strong&gt;》&lt;br&gt;其中电力系统稳态分析主要介绍&lt;/p&gt;
+      &lt;h2 id=&quot;电力系统分析&quot;&gt;&lt;a href=&quot;#电力系统分析&quot; class=&quot;headerlink&quot; title=&quot;电力系统分析&quot;&gt;&lt;/a&gt;电力系统分析&lt;/h2&gt;&lt;p&gt;课程分为《&lt;strong&gt;电力系统稳态分析&lt;/strong&gt;》和《&lt;strong&gt;电力系统暂态分析&lt;/strong&gt;》&lt;br&gt;其中电力系统稳态分析主要介绍&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;电力系统基本概念；&lt;/li&gt;
-&lt;li&gt;正常状态下系统各元件参数等值电
-        
-      
+&lt;li&gt;正常状态下系统各元件参数等值电路；&lt;/li&gt;
+&lt;li&gt;正常情况运行状态的分析计算；&lt;/li&gt;
+&lt;li&gt;正常情况下的运行状态调整。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;电力系统暂态分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电力系统短路时的基本概念；&lt;/li&gt;
+&lt;li&gt;电力系统三相短路电流分析计算；&lt;/li&gt;
+&lt;li&gt;电力系统不对称短路电流分析计算；&lt;/li&gt;
+&lt;li&gt;简单电力系统的静态稳定和暂态稳定。&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
+    
+      <category term="PowerSystemAnalysis" scheme="http://yoursite.com/categories/PowerSystemAnalysis/"/>
     
     
   </entry>
   
   <entry>
-    <title>java001</title>
+    <title>Java学习笔记</title>
     <link href="http://yoursite.com/2020/07/01/java001/"/>
     <id>http://yoursite.com/2020/07/01/java001/</id>
     <published>2020-07-01T06:35:21.039Z</published>
-    <updated>2020-07-01T06:37:30.031Z</updated>
+    <updated>2020-07-01T06:57:21.394Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;Java初体验&quot;&gt;&lt;a href=&quot;#Java初体验&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;Java初体验&quot;&gt;&lt;a href=&quot;#Java初体验&quot; class=&quot;headerlink&quot; title=&quot;Java初体验&quot;&gt;&lt;/a&gt;Java初体验&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;计算机包括两部分：&lt;br&gt;硬件：鼠标、键盘、显示器、主机箱内部的CPU、内存条、硬盘等…&lt;br&gt;&lt;strong&gt;注意&lt;/strong&gt;：计算机只有硬件是无法工作的，需要软件驱动硬件才能工作。&lt;br&gt;软件：包括系统软件和应用软件&lt;br&gt;&lt;strong&gt;系统软件&lt;/strong&gt;：直接和硬件交互的软件，例如：window7，linux操作系统&lt;br&gt;&lt;strong&gt;应用软件&lt;/strong&gt;：应用软件通常运行在系统软件中，比如QQ运行在windows操作系统上&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们通常说的软件开发一般是指使用计算机编程语言完成&lt;strong&gt;应用程序&lt;/strong&gt;的开发&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;Java是世界上最好的语言&lt;/del&gt;&lt;/p&gt;
     
     </summary>
     
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
     
     
   </entry>
@@ -112,7 +118,7 @@
     <link href="http://yoursite.com/2020/03/13/hexofirst/"/>
     <id>http://yoursite.com/2020/03/13/hexofirst/</id>
     <published>2020-03-13T07:19:33.246Z</published>
-    <updated>2020-03-16T04:00:47.793Z</updated>
+    <updated>2020-07-01T06:50:46.245Z</updated>
     
     <summary type="html">
     
