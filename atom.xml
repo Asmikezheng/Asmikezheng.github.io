@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-06T11:08:28.461Z</updated>
+  <updated>2020-07-01T06:39:43.713Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>controlelectricsystem</title>
+    <link href="http://yoursite.com/2020/07/01/controlelectricsystem/"/>
+    <id>http://yoursite.com/2020/07/01/controlelectricsystem/</id>
+    <published>2020-07-01T06:37:51.953Z</published>
+    <updated>2020-07-01T06:39:43.713Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##电力系统分析&lt;br&gt;课程分为《&lt;strong&gt;电力系统稳态分析&lt;/strong&gt;》和《&lt;strong&gt;电力系统暂态分析&lt;/strong&gt;》&lt;br&gt;其中电力系统稳态分析主要介绍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电力系统基本概念；&lt;/li&gt;
+&lt;li&gt;正常状态下系统各元件参数等值电
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java001</title>
+    <link href="http://yoursite.com/2020/07/01/java001/"/>
+    <id>http://yoursite.com/2020/07/01/java001/</id>
+    <published>2020-07-01T06:35:21.039Z</published>
+    <updated>2020-07-01T06:37:30.031Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Java初体验&quot;&gt;&lt;a href=&quot;#Java初体验&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo美化--next主题</title>
