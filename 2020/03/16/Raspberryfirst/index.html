@@ -404,69 +404,72 @@
 <p>本文基于win10系统，针对树莓派4B的系统搭建（同时适用于树莓派3B和3B+）</p>
 </blockquote>
 <a id="more"></a>
-
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>树莓派</strong>英文名(Raspberry Pi)，是为计算机编程而设计的只有手掌大小的卡片式电脑，其系统基于Linux。随着Windows 10 IoT的发布，我们也可以使用运行Windows系统的树莓派。</p>
 <p><strong>树莓派到底能干什么</strong><br>Our mission is to put the power of computing and digital making into the hands of people all over the world. We do this so that more people are able to harness the power of computing and digital technologies for work, to solve problems that matter to them, and to express themselves creatively.                                         ——<a href="https://www.raspberrypi.org/" target="_blank" rel="noopener">树莓派官网</a></p>
 <hr>
 <p><strong>树莓派型号对比</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">名称</th>
-<th align="center">Raspberry Pi 3B</th>
-<th align="center">Raspberry Pi 3B+</th>
-<th align="center">Raspberry Pi 4B</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">Raspberry Pi 3B</th>
+<th style="text-align:center">Raspberry Pi 3B+</th>
+<th style="text-align:center">Raspberry Pi 4B</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">SOC</td>
-<td align="center">Broadcom BCM2837</td>
-<td align="center">Broadcom BCM2837B0</td>
-<td align="center">Broadcom BCM2711</td>
+<tbody>
+<tr>
+<td style="text-align:center">SOC</td>
+<td style="text-align:center">Broadcom BCM2837</td>
+<td style="text-align:center">Broadcom BCM2837B0</td>
+<td style="text-align:center">Broadcom BCM2711</td>
 </tr>
 <tr>
-<td align="center">CPU</td>
-<td align="center">64-位 1.2GHz四核</td>
-<td align="center">64-位 1.4GHz四核</td>
-<td align="center">64-位 1.5GHz四核</td>
+<td style="text-align:center">CPU</td>
+<td style="text-align:center">64-位 1.2GHz四核</td>
+<td style="text-align:center">64-位 1.4GHz四核</td>
+<td style="text-align:center">64-位 1.5GHz四核</td>
 </tr>
 <tr>
-<td align="center">GPU</td>
-<td align="center">BVC IV@400MHz</td>
-<td align="center">BVC IV@400MHz</td>
-<td align="center">BVC VI@500MHz</td>
+<td style="text-align:center">GPU</td>
+<td style="text-align:center">BVC IV@400MHz</td>
+<td style="text-align:center">BVC IV@400MHz</td>
+<td style="text-align:center">BVC VI@500MHz</td>
 </tr>
 <tr>
-<td align="center">蓝牙</td>
-<td align="center">蓝牙4.1</td>
-<td align="center">蓝牙4.2</td>
-<td align="center">蓝牙5.0</td>
+<td style="text-align:center">蓝牙</td>
+<td style="text-align:center">蓝牙4.1</td>
+<td style="text-align:center">蓝牙4.2</td>
+<td style="text-align:center">蓝牙5.0</td>
 </tr>
 <tr>
-<td align="center">USB接口</td>
-<td align="center">USB2.0*4</td>
-<td align="center">USB2.0*4</td>
-<td align="center">USB2.0<em>2/USB3.0</em>2</td>
+<td style="text-align:center">USB接口</td>
+<td style="text-align:center">USB2.0*4</td>
+<td style="text-align:center">USB2.0*4</td>
+<td style="text-align:center">USB2.0<em>2/USB3.0</em>2</td>
 </tr>
 <tr>
-<td align="center">HDMI</td>
-<td align="center">标准HDMI*1</td>
-<td align="center">标准HDMI*1</td>
-<td align="center">micro HDMI*2支持4k60</td>
+<td style="text-align:center">HDMI</td>
+<td style="text-align:center">标准HDMI*1</td>
+<td style="text-align:center">标准HDMI*1</td>
+<td style="text-align:center">micro HDMI*2支持4k60</td>
 </tr>
 <tr>
-<td align="center">有线网络</td>
-<td align="center">10/100Mb/s以太网</td>
-<td align="center">USB 2.0千兆以太网</td>
-<td align="center">真千兆以太网(网口可达)</td>
+<td style="text-align:center">有线网络</td>
+<td style="text-align:center">10/100Mb/s以太网</td>
+<td style="text-align:center">USB 2.0千兆以太网</td>
+<td style="text-align:center">真千兆以太网(网口可达)</td>
 </tr>
 <tr>
-<td align="center">以太网Poe</td>
-<td align="center">无</td>
-<td align="center">通过额外的HAT以太网供电</td>
-<td align="center">通过额外的HAT以太网供电</td>
+<td style="text-align:center">以太网Poe</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">通过额外的HAT以太网供电</td>
+<td style="text-align:center">通过额外的HAT以太网供电</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>ps.通过上图我觉得是等等党的胜利hhh</p>
 </blockquote>
@@ -486,6 +489,7 @@
 <blockquote>
 <p><strong>注</strong>：如果还是压缩文件或者不能正常显示，说明是压缩软件本身需要设计，进入压缩软件设置界面，如图将img文件前的对勾去掉。</p>
 <div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/raspberry/select.png" style="zoom:50%" ></div>
+
 </blockquote>
 <h4 id="1-2镜像的烧写"><a href="#1-2镜像的烧写" class="headerlink" title="1.2镜像的烧写"></a>1.2镜像的烧写</h4><ul>
 <li>将sd卡插入电脑，使用专门的格式化工具SDFormatter，格式化内存卡。</li>
@@ -781,7 +785,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共13.3k字</span>
+  <span class="post-count">博客全站共13.2k字</span>
 </div>
 
 
@@ -1274,6 +1278,8 @@
   
 
   
+  
+
 
   
 
