@@ -1,6 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>风力发电基础</title>
+    <url>/2020/07/10/windtoelec/</url>
+    <content><![CDATA[<h2 id="风力发电基础"><a href="#风力发电基础" class="headerlink" title="风力发电基础"></a>风力发电基础</h2><blockquote>
+<p><strong>风到底是怎么变成电的呢？</strong><br>最基本原理是利用风带动风车叶片进行转动，将风能转化为机械能，使用机械能带动风力发电机发电</p>
+</blockquote>
+<a id="more"></a>
+
+<p>[TOC]</p>
+<h3 id="风力发电基本原理"><a href="#风力发电基本原理" class="headerlink" title="风力发电基本原理"></a>风力发电基本原理</h3><p>风力发电机主要包含三部分</p>
+<ul>
+<li>风轮</li>
+<li>机舱</li>
+<li>塔杆</li>
+</ul>
+<p>大型与电网接驳的风力发电机的最常见的结构，是横轴式三叶片风轮，并安装在直立管状塔杆上。</p>
+<p>　　比较简单的风力发电机是采用<strong>固定速度</strong>的。通常采用两个不同的速度。即在弱风下用低速和在强风下用高速。这些定速风电机的感应式异步发电机能够直接发产生电网频率的交流电。</p>
+<p>　　比较新型的设计一般是<strong>可变速的</strong>(比如Vestas 公司的V52-850千瓦风电机转速为每分钟14转到每分钟31.4 转)。利用可变速操作，风轮的空气动力效率可以得到改善，从而提取更多的能量，而且在弱风情况下噪音更低。[^1]</p>
+<p><strong>所有风力发电机的功率输出是随着风力而变的。</strong></p>
+<p>强风下最常见的两种限制功率输出的方法(从而限制风轮所承受压力)</p>
+<ul>
+<li><p><strong>失速调节</strong>：使用失速调节的风电机，超过额定风速的强风会导致通过叶片的气流产生扰流，令风轮失速。当风力过强时，叶片尾部制动装置会动作，令风轮刹车。</p>
+</li>
+<li><p><strong>斜角调节</strong>：使用斜角调节的风电机，每片叶片能够以纵向为轴而旋转，叶片角度随着风速不同而转变，从而改变风轮的空气动力性能。当风力过强时，叶片转动至迎气边缘面向来风，从而令风轮刹车[^2]。</p>
+</li>
+</ul>
+<h3 id="风轮机理论"><a href="#风轮机理论" class="headerlink" title="风轮机理论"></a>风轮机理论</h3><p>风轮机是把风的动能变成机械能的重要部件，当风吹向桨叶时，桨叶上产生的气动力驱动风轮转动。其主要分为：</p>
+<ul>
+<li>水平轴风轮机</li>
+<li>垂直轴风轮机</li>
+<li>特殊风轮机</li>
+</ul>
+<h3 id="定浆距风力发电机组"><a href="#定浆距风力发电机组" class="headerlink" title="定浆距风力发电机组"></a>定浆距风力发电机组</h3><p><em>what</em>：风力机的功率调节完全依靠叶片的气动特性。<br><em>how</em>：桨叶与轮毂的连接是固定的，即当风速变化时，桨叶的迎风角度不能随之变化。风力机获得的功率随风速不停的变化[^3]。</p>
+<p>　　风电机组一般工作在小于额定风速时风轮机的转换效率Cp的最佳区段。当风速超过额定风速时，为了确保发电机输出功率恒定，通过叶片失速来降低Cp，来维持功率恒定。定浆距发电系统的发电机正常工作滑差小于1%，允许的滑差范围一般小于5%，但是风速变化范围却很大。下图为风轮机的典型Cp~λ特性曲线。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/betz.png" style="zoom:70%" ></div>
+
+<blockquote>
+<p>由上图可以看出风机功率系数是有极限的，也就是著名的betz极限。下面是其推导过程。</p>
+</blockquote>
+<h4 id="betz极限"><a href="#betz极限" class="headerlink" title="betz极限"></a>betz极限</h4><p>假设将通过风轮的空气从空气中分离出来当作孤立的事物来看待,那么就可以形成一个横截面为圆形的长的气流管。假定风轮是理想的，那么气流管中的空气质量和流量都相等。但由于气流管中的空气经叶轮后速度下降,且其质量不变，密度将减小，体积会变大，因此流管的横截面积将会发生膨胀[^4]。贝茨定律的极限是理论上最大的风能利用系数。</p>
+<p><strong>理想风轮</strong>：能全部接受风能并且没有轮毂，叶片是无限多，对气流没有任何阻力。而空气流是连续的，不可压缩的，叶片扫掠面上的气流是均匀的，气流速度的方向不论在叶片前或流经叶片后都是垂直叶片扫掠面的(或称为是平行风轮轴线的)[^5]。</p>
+<h5 id="假定条件"><a href="#假定条件" class="headerlink" title="假定条件"></a>假定条件</h5><p>普通气流理想化为平流，假定速度为$v_1$</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windfirst.png" style="zoom:50%" ></div>
+
+<p>在普通气流中加入理想风轮，由于速度会不突变，体积会变大，在横截面发生膨胀，因此通过理想风轮的末速度为$v_2$，通过风轮的瞬间速度为$v$，<strong>但是由于动能没有改变，那么在风通过理想风轮的瞬间是什么能量变成机械能了呢？</strong>实际上是压强发生了突然减小，使得风轮转动，因此设大气压强为$p$，通过风轮前的瞬间压强为$p_1$，通过风轮后的瞬间压强为$p_2$</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/usewindpower.png" style="zoom:40%" ></div>
+
+<p>同时设风车面积为$A$，空气密度为$\rho$，</p>
+<h5 id="推导方法一"><a href="#推导方法一" class="headerlink" title="推导方法一"></a>推导方法一</h5><p>叶片处单位时间内通过的风的质量$$M = \rho \times A \times \frac{v_1 + v_2}{2}$$</p>
+<p>由牛顿第二定律(牛顿：这还是我的管辖范围)风机的机械能等于初始动能减去最终动能，因此机械能为：$$P = \frac{1}{2} \times M \times (v_1 ^2 - v_2 ^2) $$</p>
+<p>将上式带入下式中得到$$P = \frac{ \rho }{2} \times A \times (v_1 ^2 - v_2 ^2)\frac{v_1 + v_2}{2} $$</p>
+<p>风能的基本计算公式为：$$P_0 = \frac{ \rho }{2} \times A \times v_1 ^3 $$</p>
+<p>所以经过化简可知$$ \frac{P}{P_0} = \frac{1}{2} \times [1 - (\frac{v_2}{v_1})^2] \times (1 + \frac{v_2}{v_1}) $$<br>此时可以得知为$\frac{v_2}{v_1} $的三次函数，通过求导求极限的方法得到$ \frac{1}{3} $和$-1$两个驻点，因为速度为正数所以当$ \frac{v_2}{v_1} = \frac{1}{3} $时，最大值为$ \frac{P}{P_0} = \frac{16}{27} \approx 59 $%</p>
+<h5 id="推导方法二"><a href="#推导方法二" class="headerlink" title="推导方法二"></a>推导方法二</h5><p>此方法主要通过压强到能量的计算来推导：由伯努利方程可知：$$p + \frac{1}{2}\rho v_1 ^2 = p_1 + \frac{1}{2}\rho v ^2$$<br>$$p + \frac{1}{2}\rho v_2 ^2 = p_2 + \frac{1}{2}\rho v ^2$$</p>
+<p>相减可得：<br>$$p_1 - p_2 =  \frac{1}{2}\rho (v_1 ^2 - v_2 ^2) $$</p>
+<p>伯努利方程本身为能量方程，因此计算动量变化率为：$$ A (p_1 - p_2) = \rho Q (v_1 - v_2) = \rho A v (v_1 - v_2) $$<br>所以$v = \frac{v_1 + v_2}{2}$</p>
+<p>因此当风车不存在的时候，单位时间通过A的气流动能为：$$A v_1 \times \frac{1}{2}\rho v_1 ^2 = \frac{ \rho }{2} \times A \times v_1 ^3$$</p>
+<p>风车存在的时候：$$A v (\frac{1}{2}\rho v_1 ^2 - \frac{1}{2}\rho v_2 ^2)$$</p>
+<p>上下两式子做比得到：<br>$$\frac{A v (\frac{1}{2}\rho v_1 ^2 - \frac{1}{2}\rho v_2 ^2)}{\frac{ \rho }{2} \times A \times v_1 ^3} = \frac{4v^2(v_1 - v)}{v_1 ^ 3 } $$</p>
+<p>将$v = \frac{v_1 + v_2}{2}$带入可知$v = \frac{2}{3} v_1$时效率最高。也可以得到betz极限为<strong>59%</strong></p>
+<h3 id="永磁同步发电机基本原理"><a href="#永磁同步发电机基本原理" class="headerlink" title="永磁同步发电机基本原理"></a>永磁同步发电机基本原理</h3><p>目前世界上的发电量几乎全部是由同步发电机发出，其即可以作为发电机运行，又可以作为电动机运行。功率因数可以调节，但是转速不可以调节。<br>基本原理[^6]</p>
+<h4 id="同步电机基础"><a href="#同步电机基础" class="headerlink" title="同步电机基础"></a>同步电机基础</h4><p>同步电机之所以叫同步电机，是因为其转速$n$和定子电流的频率$f_1$之间存在严格的确定的关系$$n = n_0 = \frac{60 f_1}{p}$$<br>其中$n_0$是同步转速。而异步电机在稳定运行的时候其转速不等于同步转速。</p>
+<p>出现区别的原因是由<strong>两者转子中的电流中的性质不同</strong>所导致的。异步电机稳态运行时，其转子转速为$n$，转子电流频率$f_2 = sf_1$，转速差为$s = \frac {n_0 - n}{n_0}$，如果转子的转速和定子的旋转磁场的转速是相同的，那么$s= 0$，则转子电流频率$f_2 = 0$，这意味着转子绕组内的电流是直流电流。</p>
+<p>如果改变异步电机的转子结构，使它成为用直流电流励磁，且可以转动的电磁铁，这样的交流电机便是同步电机。</p>
+<h4 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h4><p>其主要由定子和转子组成。</p>
+<ul>
+<li>定子：</li>
+</ul>
+<p><em>what</em>：由导磁的定子铁心和导电的三相绕组以及固定铁心用的基座和端盖等部件组成。<br><em>how</em>：可以输入输出电功率，并且产生旋转磁场。</p>
+<ul>
+<li>转子：</li>
+</ul>
+<p><em>what</em>：一种是有明显磁极的凸极式，一个是在圆柱体上开一些槽，没有明显磁极的隐极式。主要由磁极，磁轭，励磁绕组，转子支架，轴以及集电环等部件组成。<br><em>how</em>：通过励磁电流以后的相邻磁极的极性呈N与S交替排列，励磁绕组两个出线端接在两个集电环上，通过与集电环相接触的静止电刷向外引出。</p>
+<h4 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h4><p><strong>根本基于电磁感应定律</strong></p>
+<p><strong>空载特性</strong>：当同步发电机的直流电流励磁的转子由原动机拖动到同步转速$n_0$时，定子上静止开路的三相绕组(也称电枢绕组)，与旋转转子上的磁极在空隙中所建立旋转磁场相对运动，定子绕组磁链发生变化。</p>
+<p>根据电磁感应定律，定子绕组内由此感应产生感应电动势$E_0$(称为励磁电动势)。改变励磁电流$I_f$的大小可相应的改变励磁电动势$E_0$的大小。此时同步电机作发电机运行而呈空载状态。在同步转速下，励磁电动势$E_0$与励磁电流$I_f$的关系即为同步电机作为发电机的空载特性。</p>
+<p>那么是怎么发电的呢？实际上在空载运行的时候其端电压$U_0 = E_0$，在定子绕组上接上对称负载，同步电动机出于负载运行状态，此时原动机（比如本文中所提到的风轮机）向发电机输入机械功率，发电机从定子绕组输出电功率，经过机电能量转换，产生电能。</p>
+<h3 id="风力发电建模"><a href="#风力发电建模" class="headerlink" title="风力发电建模"></a>风力发电建模</h3><blockquote>
+<p><strong>风到底是怎么变成电的呢？</strong>下边这个模型可以窥探一二。</p>
+</blockquote>
+<h4 id="风速模型"><a href="#风速模型" class="headerlink" title="风速模型"></a>风速模型</h4><p>因为风具有随机性和间歇性的特点，因此风速模型一般采用四分量叠加法，即：$v = v_b + v_g + v_r + v_t $，为基本风，阵风，渐变风和随机风[^7]。</p>
+<ul>
+<li>基本风：常用的确定基本风速的概率分布为威布尔分布和瑞利分布，而基本风的分布本质上是正偏态分布，这时候使用威布尔分布模拟在实际测量中拟合效果好。同时在这个公式中可以看到，当k=1时为指数分布，k=2时为瑞利分布。$$v_b = A \Gamma  (1 + \frac{1}{k})$$</li>
+</ul>
+<p>其中尺寸参数A和形状参数k可根据风电场的实测数据估算。下图左为基本风变化曲线，图右为仿真模型。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/nomalwind.png" style="zoom:70%" ></div>
+　
+- 阵风：描述风速突然变化的特性，通常用来分析风电系统对电网电压波动的影响。
+
+<p>$$v_g = \left{\begin{matrix}0   , t&lt;T_1\ \frac{v_{g max}}{2}[1 - cos(2 \pi \cdot \frac {t - T_1}{T_g})],T_1 \leq t \leq T_1 + T_g \ 0,t &gt; T_1 + T_g\end{matrix}\right.$$</p>
+<p>其中$v_g$为阵风风速，$v_{g max}$为阵风峰值，$T_1$为阵风开始时间，$T_g$为阵风周期。下图左为阵风风速随时间变化曲线，图右为仿真模型，设$v_{gmax} = 6m/s$，$T_1 = 0.03s$，$T_g = 0.05s$。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zhenfeng.png" style="zoom:100%" ></div>
+
+<ul>
+<li>渐变风：顾名思义，渐变的特性</li>
+</ul>
+<p>$$v_g = \left{\begin{matrix}0   , t&lt;T_{r1}, t&gt;T_{r2} + T\ v_{rmax} \frac{t-T_{r1}}{T_{r2}-T_{r1}}, T_{r1} \leq t \leq T_{r2} \ v_{rmax},T_{r2}&lt; t &lt; T_{r2} + T \end{matrix}\right.$$</p>
+<p>式中，$v_r$为渐变风速，$V_{rmax}$为渐变风峰值，T为渐变风持续时间，$T_{r1}$为渐变风启动时间，$T_{r2}$为渐变风结束时间。下图左为渐变风风速随时间变化曲线，图右为仿真模型，设$v_{rmax} = 6m/s$，$T_1 = 0.04s$，$T_g = 0.05s$。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/jianbianfeng.png" style="zoom:100%" ></div>
+
+<ul>
+<li>随机风：描述特定高度上风速变化的随机特性：$$v_t = v_{tmax}R_{andom}(-1,1)cos(\omega_v + \phi_v)$$</li>
+</ul>
+<p>式中$v_{tmax}$为最大随机风速，$R_{andom}$为-1到1之间均匀分布的随机变量，$\omega_v$为风速波动的平均距离，$ \phi_v$为$0 - 2 \pi$之间服从均匀概率分布的随机量，下图为仿真模型。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/suijifeng.png" style="zoom:60%" ></div>
+
+<p>综合模型为：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zonghe.png" style="zoom:60%" ></div>
+
+<h4 id="风力发电机组的启动模型"><a href="#风力发电机组的启动模型" class="headerlink" title="风力发电机组的启动模型"></a>风力发电机组的启动模型</h4><p>在风轮机的启动模型中，就存在上文所说到的betz极限的应用，风轮机的功率系数$C_p$与叶尖速比$\lambda$和叶片桨距角$\beta$有关$$C_p = 0.5(\frac{rC_f}{\lambda}-0.022 \beta - 2)e^{-0.255 \frac{rC_f}{\lambda}}$$<br>式中$C_f$为叶片设计常数，取3，r取12。由上文可知，某一确定的桨距角$\beta$，$C_p$有一极大值存在，因此在风力机运行的时候不能保证酥油的风速下都能产生最大的功率输出。$C_p$的仿真模型如下所示。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/monibetz.png" style="zoom:60%" ></div>
+
+<p>一台风轮半径为R的风轮机，当风速为v的时候，其产生的机械功率和机械转矩分别为：</p>
+<p>$$P_m = \frac{1}{2} \rho \pi R^2 C_p(\beta,\lambda) v^3$$<br>$$T_m = \frac{P_m}{\omega} = \frac{1}{2} \rho \pi R^3 C_p(\beta,\lambda) \frac{v^2}{\lambda}$$</p>
+<p>其中叶尖速比$\lambda = \frac{\omega R}{v}$，$\rho$为空气密度，即在常温下，为1.205$kg/m^3$，$\omega$为叶片旋转速度，实际上为15r/min–20r/min，仿真时取后者。因此风力仿真模型为：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chuandong.png" style="zoom:60%" ></div>
+
+<h4 id="传动齿轮模型"><a href="#传动齿轮模型" class="headerlink" title="传动齿轮模型"></a>传动齿轮模型</h4><p>风力发电传动系统的作用是把原动部分的运动转变为执行部分所需的机械动作，即把风通过风力机所产生的气动转矩变为发电机侧的机械转矩。</p>
+<p>因此传动系统是能量传输的纽带，同时传动系统的运动取决于驱动力及阻力的特性。忽略转轴的倔强系数、阻尼因数，可知风力机转轴到发电机转子之间的机械传动部分的数学方程为:</p>
+<p>$$T_{\omega t} - T_{ls} = J_{\omega t} \frac{d \omega_t}{dt}$$<br>$$ T_{ls} = K_g  T_{hs}$$</p>
+<p>其中$J_{\omega t}$，$\omega$分别为风机的转动惯量和机械转速，$ T_{ls} ,T_{hs}$分别是经过传动齿轮低速轴和高速轴上的机械转矩，$K_g$为齿轮箱的变比。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chilun.png" style="zoom:50%" ></div>
+
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chilunmoni.png" style="zoom:70%" ></div>
+
+<h4 id="三相同步发电机模型"><a href="#三相同步发电机模型" class="headerlink" title="三相同步发电机模型"></a>三相同步发电机模型</h4><p>本文所使用的的发电机模块是simulink中的PMSM模块，其中集成了传动模型和感应电机模型</p>
+<ul>
+<li>传动模型：当气动转矩$T_a$和电磁转矩$T_e$发生变化时，风力发电机风轮机转子将加速或减速运行，对于直驱型永磁同步发电机而言，假设转子和电机之间为刚性连接则</li>
+</ul>
+<p>$$J_{eq} \frac {d \omega _m}{d t} = T_a - T_t - T_e$$</p>
+<p>式中$T_l = B_m \cdot \omega <em>m$为传动损失，$B_m$为转动粘滞系数，$J</em>{eq} = J_r+ J_g$为机组等效转动惯量，$J_r ，J_g$分别为风轮机和电机的传动惯量。</p>
+<ul>
+<li>感应电机模型：本文中的永磁同步发电机是基于$d_q$旋转坐标轴建立起的数学模型</li>
+</ul>
+<p>$$\left{\begin{matrix} \frac{di_d}{dt} =  \frac{u_d}{L_d} -  \frac{Ri_d}{L_d} + \frac{L_q}{L_d}n_p \omega _m i_q \ \frac{di_q}{dt} + \frac{u_q}{L_q} =  \frac{Ri_q}{L_q} + \frac{L_d}{L_q}n_p \omega _m i_d - \frac{\lambda n_p \omega _m}{L_q}\end{matrix}\right.$$</p>
+<p>式中$i_d$和$i_q$分别为发电机的d轴和q轴电流，$L_d$和$L_q$分别为发电机的d轴和q轴电感，$u_d$和$u_q$分别为电压源d轴和q轴分量，R为定子电阻，$\omega _m$为转子的机械角速度，$n_p$为发电机转子极对数，$\lambda$为永磁体磁链。</p>
+<p>PMSM的电磁转矩表达式为：$$T_e = 1.5n_p i_q [(L_d-L_q)i_d + \lambda]$$</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/tongbudianji.png" style="zoom:50%" ></div>
+
+<p>其中需要注意的是，在使用<strong>PMSM</strong>模块的时候需要加上<strong>powergui</strong>模块在旁边，并且什么都不用连接才不会报错，其次是本文中的<strong>PMSM</strong>模块的驱动电路为三相逆变桥，驱动电压为100V的直流电压[^8]。</p>
+<h4 id="整体建模结构图"><a href="#整体建模结构图" class="headerlink" title="整体建模结构图"></a>整体建模结构图</h4><div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windzhengtii.png" style="zoom:100%" ></div>
+
+<h3 id="结果与总结"><a href="#结果与总结" class="headerlink" title="结果与总结"></a>结果与总结</h3><p>下图中分别为基本风，阵风，渐变风和随机风的示波器显示图像。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windphoto.png" style="zoom:100%" ></div>
+
+<p>综合风速图如下所示：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zonghewindphoto.png" style="zoom:50%" ></div>
+
+<p>风力机输出的机械功率和机械转矩如下所示：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/jixiegonglvyuzhuanju.png" style="zoom:60%" ></div>
+
+<p>三相电流输出如下所示：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/iiii.png" style="zoom:30%" ></div>
+
+<hr>
+<p>本文在模拟的时候虽然能在一定程度上反应风能是如何变为三相电的，但是还是有很多的不足。</p>
+<ul>
+<li>只考虑到了能量的传递没有考虑到能量的损耗，并且本文中只是定浆距角进行讨论，实际上桨距角会随着风向风速的变化而发生变化。</li>
+<li>最终结果是三相电流，并没有模拟风力发电塔基座的变压器等结构，实际上还要经过一些步骤与转换才能正式接入三相电网为千家万户供电。</li>
+</ul>
+<hr>
+<p>[^1]: 夏辑. 高油价下新能源与节能技术研发趋势[J]. 安徽科技,2008,(8):4-8</p>
+<p>[^2]: 耿华,杨耕,马小亮等. 并网型风力发电机组的控制技术综述[J]. 电力电子技术, 2006, 40(6): 33-36</p>
+<p>[^3]: 付海涛. 变速恒频风力发电系统的建模与仿真研究[D]. 华中科技大学, 2005.</p>
+<p>[^4]: Betz, A. (1966) Introduction to the Theory of Flow Machines. (D. G. Randall, Trans.) Oxford: Pergamon Press.</p>
+<p>[^5]: 钱杰. 低风速小型永磁风力发电机叶片及支承的研究与设计[D].武汉理工大学,2010.</p>
+<p>[^6]: 王岩. 电机及拖动基础. [M]. 清华大学出版社, 2012.6</p>
+<p>[^7]: 唐钱江, 韩春成, 王萍, 王立地. 离网小型风力发电系统的建模与仿真[J]. 电网与清洁能源, 2012, 28(3): 74-78</p>
+<p>[^8]: 袁雷. 现代永磁同步电机控制原理及MATLAB仿真. [M]. 北京航空航天大学出版社. 2016.4</p>
+]]></content>
+      <categories>
+        <category>wind_power</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Java学习笔记</title>
+    <url>/2020/07/01/java002/</url>
+    <content><![CDATA[<h2 id="java入门第二章"><a href="#java入门第二章" class="headerlink" title="java入门第二章"></a>java入门第二章</h2><blockquote>
+<p>这部分内容适用于大部分编程语言，适用于复习一下C语言基础</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><ul>
+<li><em>what</em>：在java源程序中凡是程序员有权利自己命名的单词都是标识符，其可以标识类名，方法名，接口名，常量名</li>
+<li><em>how</em>：一个合法的标识符只能由数字，字母，下划线，美元符号组成，不能含有其他符号，并且不能用数字开头，严格区分大小写，同时关键字不能为标识符，理论上无长度限制</li>
+<li><em>why</em>：最好见名知意，并准守驼峰命名方式</li>
+</ul>
+<blockquote>
+<p><strong>类名，接口名：首字母大写，后面每个单词首字母大写</strong><br><strong>变量名，方法名：首字母小写，后面每个单词首字母大写</strong><br><strong>常量名：全部大写</strong></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IdentifierText01</span></span>&#123;<span class="comment">//IdentifierText01是一个类名，名字可以修改</span></span><br><span class="line">	<span class="comment">//main是一个方法名</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;<span class="comment">//args是一个变量名</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>如上面这段程序中public，class，void等等等等都是关键字，是由SUM公司定义的 </p>
+<h3 id="字面值"><a href="#字面值" class="headerlink" title="字面值"></a>字面值</h3><ul>
+<li><em>what</em>：就是数据，不同于常量，字面值是java源程序的组成部分之一，包括标识符和关键字它们都是java源程序的组成部分，如：<code>10</code>,<code>100</code>,<code>3.14</code>,<code>&quot;abc&quot;</code>,<code>&#39;a&#39;</code>,<code>true</code>,<code>false</code></li>
+<li>数据在现实世界当中是分门别类的，所以数据在计算机编程语言当中也是有类型的：<ul>
+<li><code>10</code>,<code>100</code>属于整数型字面值</li>
+<li><code>3.14</code>属于浮点型字面值</li>
+<li><code>true</code>,<code>false</code>属于布尔型字面值</li>
+<li><code>&quot;abc&quot;</code>,<code>&#39;a&#39;</code>属于字符串型字面值 </li>
+<li><code>&#39;A&#39;</code>,<code>&#39;人&#39;</code>属于字符型字面值</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意：</strong><br><strong>java语言中所有的字符串型字面值必须使用双引号括起来，双引号是半角的</strong><br><strong>java语言中所有的字符型字面值必须使用单引号括起来，单引号是半角的</strong><br><strong>字面值即使相同可能其的物理存放地址是不相同的，每一个字面值都占用一定的内存空间</strong></p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p><em>what</em>：本质上是内存中的一块空间，这块空间有数据类型，有名字，有字面值，因此变量包含<strong>数据类型、名称和字面值【数据】</strong>。变量是内存中存储数据的最基本单元</p>
+<ul>
+<li><p>数据类型的作用：不同的数据有不同的类型，不同的数据类型底层会分配不同大小的数据空间，同时指导程序在运行阶段应该分配多大的内存空间<strong>（动态的）</strong></p>
+</li>
+<li><p>变量要求其中存储的具体的<strong>数据</strong>必须和变量的<strong>数据类型</strong>一致，因此定义方法是<code>数据类型 变量名;</code>，赋值方法是<code>变量名 = 字面值;</code>，定义和赋值过程可以同时完成</p>
+</li>
+<li><p>变量可以重复访问，内存空间得到重复使用，则访问一个变量包括两种访问方式</p>
+<ul>
+<li>读取变量中保存的具体数值 get</li>
+<li>修改变量中保存的具体数值  set</li>
+</ul>
+</li>
+</ul>
+<p><strong>java中的变量必须先声明再赋值才能访问，只有<code>int i</code>实际上内存空间并没有开辟出来，变量i并没有初始化</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">VarTest01</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">	    <span class="comment">//声明一个int类型的变量，起名i</span></span><br><span class="line">	    <span class="keyword">int</span> i;</span><br><span class="line">		<span class="comment">//开辟内存，i变量完成初始化</span></span><br><span class="line">	    i = <span class="number">100</span>;</span><br><span class="line">	    System.out.println(i);</span><br><span class="line">	    </span><br><span class="line">		i = <span class="number">200</span>;</span><br><span class="line">	    System.out.println(i);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*以下代码有错误，重复定义</span></span><br><span class="line"><span class="comment">		int i = 200;</span></span><br><span class="line"><span class="comment">		System.out.println(i);</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：<br>在方法体中的java代码，是严格遵循自上而下的顺序执行的<br>并且在一个<strong>作用域</strong>中，变量名不能重名，但是变量可以重新赋值</p>
+</blockquote>
+<h4 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h4><p><em>what</em>：描述变量的有效范围，出了这个范围该变量就无法访问。简单来说就是：</p>
+<blockquote>
+<h4 id="出了大括号就不认识"><a href="#出了大括号就不认识" class="headerlink" title="出了大括号就不认识"></a>出了大括号就不认识</h4></blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">VarTest02</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//注意这里的static不能去掉</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> k = <span class="number">90</span>;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">	    <span class="comment">//变量i的作用域是main方法</span></span><br><span class="line">	    <span class="comment">//在整个main中是有效的，出了大括号到下边的那个方法体内就无法被识别了</span></span><br><span class="line">	    <span class="keyword">int</span> i = <span class="number">100</span>;</span><br><span class="line">	    System.out.println(i);</span><br><span class="line">	    System.out.println(k);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">0</span>;a&lt;<span class="number">10</span>;a++)&#123;</span><br><span class="line">		<span class="comment">//a变量的作用域是整个for循环，for循环结束之后，a变量的内存被释放了</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//这里无法访问a变量</span></span><br><span class="line">		<span class="comment">//System.out.println(a);</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> j;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">10</span>;j++)&#123;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//这里可以访问main方法中的j变量</span></span><br><span class="line">		System.out.println(j);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">	 <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dosame</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">//这里无法访问main方法中的变量i</span></span><br><span class="line">	    <span class="comment">//System.out.println(i);</span></span><br><span class="line">		<span class="comment">//k是在外边大括号定义的</span></span><br><span class="line">		System.out.println(k);</span><br><span class="line">		</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>这里注意，如果使用cmd中的javac进行编译的时候，因为注释是中文，因此可能会出现<code>编码GBK的不可映射字符</code>这个错误</strong><br><strong>错误原因是：ANSI和UTF-8编码冲突</strong><br><strong>解决办法是：编译的时候使用<code>javac -encoding UTF-8 文件名.java</code></strong>或者使用其他编译软件如：eclipse</p>
+</blockquote>
+<h4 id="变量的分类"><a href="#变量的分类" class="headerlink" title="变量的分类"></a>变量的分类</h4><p>根据位置进行分类</p>
+<ul>
+<li>局部变量：在方法体中声明的变量</li>
+<li>成员变量（全局变量）：在方法体外【类体之内】声明的变量</li>
+</ul>
+<p>在不同的作用域中变量名是可以相同的，在不同的作用域中，变量名不能重名</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><em>what</em>&amp;<em>how</em>：程序中的不同数据都有相关类型，不同数据类型所占用的内存空间大小不同。因此数据类型是指导JVM在运行程序的时候给该数据分配多大的空间</p>
+<ul>
+<li>基本数据类型【<strong>四大类八小种</strong>】<ul>
+<li>整数型：byte（1字节=8个bit（一个bit就是一个二进制位）【-127 ~ 128】），short（2字节【-32768 ~ 32767】），int（4字节），long（8字节）</li>
+<li>浮点型：float（4字节），double（8字节）</li>
+<li>布尔型：boolen（1字节）</li>
+<li>字符型：char：<code>&#39;a&#39;</code>（2字节【0 ~ 65535】）</li>
+</ul>
+</li>
+<li>引用数据类型<ul>
+<li><strong>字符串</strong>：<code>&quot;abc&quot;</code></li>
+<li>接口</li>
+<li>类</li>
+<li>数组……</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>一字节表示范围为-128~127【原码，反码，补码】<br>这里可以把二进制复习一下，后边会在数电复习中施工</p>
+</blockquote>
+<pre><code>&apos;a&apos;   ------(按照ASCII解码)-------&gt;        0110 0001
+0110 0001  ------(按照ASCII编码)-------&gt;    &apos;a&apos;</code></pre><p>编码和解码的时候采用同一套对照表，不会出现乱码，当解码和编码的时候采用的是不同的对照表，会出现乱码问题。</p>
+<p>注意：short和char所表示的种类总数是一样的，只不过char可以表示更大的正整数，是因为char没有负数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataTypeTest</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//注意这里的static不能去掉</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> k = <span class="number">90</span>;</span><br><span class="line">	<span class="comment">//成员变量没有手动赋值时系统会默认赋值，八种数据类型的默认值是向0看齐【局部变量不会】</span></span><br><span class="line">	<span class="comment">//因此变量还是遵循先声明，后赋值，再访问</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> f;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">	    <span class="comment">//i为局部变量</span></span><br><span class="line">	    <span class="keyword">int</span> i = <span class="number">100</span>;</span><br><span class="line">	    </span><br><span class="line">		System.out.println(i);    <span class="comment">//100</span></span><br><span class="line">	    System.out.println(k);    <span class="comment">//90</span></span><br><span class="line">		System.out.println(f);    <span class="comment">//0</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h4><blockquote>
+<ul>
+<li>对于char类型其中单引号中间只能有一个标识一个字符</li>
+<li>对于转译字符<code>\</code>具转译功能，则可以存在两个标识，为一个字符，比如：<code>\n</code>换行符；<code>\t</code>制表，同时注意输出反斜杠或者单引号时的写法</li>
+<li><code>print</code>表示输出不换行，<code>println</code>输出之后换行</li>
+<li>同时在JDK中自带的native2ascii.exe命令，可以将文字转换成Unicode编码方式</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataTypeTest01</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="comment">//定义一个char类型的变量，起名c，同时赋值为'a'</span></span><br><span class="line">	    <span class="keyword">char</span> c = <span class="string">'a'</span>;</span><br><span class="line">		System.out.println(c);  </span><br><span class="line">		 </span><br><span class="line">		<span class="comment">//一个中文占用两个字节，char类型正好是2个字节，因此java中的char类型可以存储一个中文字符</span></span><br><span class="line">	    <span class="keyword">char</span> x = <span class="string">'国'</span>;</span><br><span class="line">		System.out.println(x);  </span><br><span class="line"></span><br><span class="line">		<span class="comment">//'ab',"a"都是字符串，因此都不能用char进行声明</span></span><br><span class="line">		<span class="comment">//char y = 'ab';</span></span><br><span class="line">		<span class="comment">//char z = "a"</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//转义字符的换行符</span></span><br><span class="line">		<span class="keyword">char</span> c2 = <span class="string">'\n'</span>;</span><br><span class="line">		System.out.println(c2);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输出\,第一个反斜杠具有转义功能，将第二个反斜杠转义成普通的反斜杠字符</span></span><br><span class="line">		<span class="comment">//同理输出'，则为c4 = '\''</span></span><br><span class="line">		<span class="keyword">char</span> c3 = <span class="string">'\\'</span>;</span><br><span class="line">		System.out.println(c3);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>java语言中的“整数型字面值”被默认当做int类型来处理，要是让这个“整数型字面值”被当做long类型来处理的话，需要在“整数型字面值”后边添加<code>L</code></li>
+<li>java语言中的“整数型字面值”有三种表示方式<ul>
+<li>十进制【是一种缺省默认的方式】</li>
+<li>八进制【在编写八进制“整数型字面值”时<strong>需要以0为开始</strong>】</li>
+<li>十六进制【在编写十六进制“整数型字面值”时<strong>需要以0x为开始</strong>】<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">010</span>;<span class="comment">//因为是0开头所以是八进制</span></span><br><span class="line">		<span class="keyword">int</span> c = <span class="number">0x10</span>;<span class="comment">//因为是0x开头所以后边是十六进制</span></span><br><span class="line"></span><br><span class="line">		System.out.println(a+b+c);<span class="comment">//34</span></span><br><span class="line">		<span class="comment">//123整数型字面值是int类型，i的变量声明也是int类型，所以不存在类型转换</span></span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">123</span>;</span><br><span class="line">		System.out.println(i);</span><br><span class="line">		<span class="comment">//456整数型字面值被当做int类型，占用4个字节，x变量在声明的时候是long类型，占用8字节，因此存在类型转换，int（小容量）----&gt;long（大容量），</span></span><br><span class="line">		<span class="comment">//小容量自动转换为大容量称为自动类型转换</span></span><br><span class="line">		<span class="keyword">long</span> j = <span class="number">456</span>;</span><br><span class="line">		System.out.println(j);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//2147483648超过了int定义的最大值但是在编译的时候依然被当做int类型来处理，所以会报错</span></span><br><span class="line">		<span class="comment">//解决错误，在字面值前一上来就当做long类型来处理，在字面值后边加`L`，因此这时不存在数据类型转换</span></span><br><span class="line">		<span class="keyword">long</span> z = <span class="number">2147483648L</span>;</span><br><span class="line">		System.out.println(z);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>电力系统分析</title>
     <url>/2020/07/01/controlelectricsystem/</url>
     <content><![CDATA[<h2 id="电力系统分析"><a href="#电力系统分析" class="headerlink" title="电力系统分析"></a>电力系统分析</h2><p>课程分为《<strong>电力系统稳态分析</strong>》和《<strong>电力系统暂态分析</strong>》<br>其中电力系统稳态分析主要介绍</p>
@@ -53,6 +338,8 @@
 <a id="more"></a>
 
 <hr>
+<p>[TOC]</p>
+<hr>
 <h3 id="准备技能"><a href="#准备技能" class="headerlink" title="准备技能"></a>准备技能</h3><h4 id="基本DOS命令"><a href="#基本DOS命令" class="headerlink" title="基本DOS命令"></a>基本DOS命令</h4><ul>
 <li><p>需要复制上边的内容是win10下左键选中直接右键</p>
 </li>
@@ -81,7 +368,7 @@
 <p>当光标在行尾，怎么选中一行？<code>shift + home</code>键<br>当光标在行首，怎么选中一行？<code>shift + end</code>键</p>
 <p>回到文件头：<code>ctrl + home</code><br>回到文件尾：<code>ctrl + end</code></p>
 <hr>
-<h6 id="计算机语言发展史"><a href="#计算机语言发展史" class="headerlink" title="计算机语言发展史"></a>计算机语言发展史</h6><ul>
+<h4 id="计算机语言发展史"><a href="#计算机语言发展史" class="headerlink" title="计算机语言发展史"></a>计算机语言发展史</h4><ul>
 <li>第一代语言：机器语言，主要编写二进制代码，以打孔机为代表</li>
 <li>第二代语言：低级语言/汇编语言，已经引入了一些英语单词，例如变量赋值采用mv</li>
 <li>第三代语言：高级语言，几乎与人类语言相通，看代码识文意</li>
@@ -97,7 +384,8 @@
 <h4 id="Java语言特性【开源、免费、纯面向对象、跨平台】"><a href="#Java语言特性【开源、免费、纯面向对象、跨平台】" class="headerlink" title="Java语言特性【开源、免费、纯面向对象、跨平台】"></a>Java语言特性【开源、免费、纯面向对象、跨平台】</h4><ul>
 <li><strong>简单性</strong>：在Java语言当中真正操作内存的是：JVM（Java虚拟机）所有的java程序都是运行在Java虚拟机当中的。而Java虚拟机执行过程中再去操作内存。对于C或者C++来说程序员都是可以直接通过指针操作内存的。Java语言屏蔽了指针概念，程序员不能直接操作指针，或者说程序员不能直接操作内存。</li>
 </ul>
-<h5 id="Java语言底层是c-实现的"><a href="#Java语言底层是c-实现的" class="headerlink" title="Java语言底层是c++实现的"></a>Java语言底层是c++实现的</h5><blockquote>
+<p><strong>Java语言底层是c++实现的</strong></p>
+<blockquote>
 <p>这种方式有优点也有缺点：<br>优点：不容易导致内存泄漏。（简单了。）<br>缺点：效率问题，包括驾驭感比较差。</p>
 </blockquote>
 <ul>
@@ -174,11 +462,6 @@
 <li>java注释</li>
 <li>public class和class的区别</li>
 </ul>
-<hr>
-<blockquote>
-<p>以上主要来自于动力字节</p>
-</blockquote>
-<hr>
 ]]></content>
       <categories>
         <category>java</category>

@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Mikezheng" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="风力发电基础 风到底是怎么变成电的呢？最基本原理是利用风带动风车叶片进行转动，将风能转化为机械能，使用机械能带动风力发电机发电">
+<meta property="og:type" content="article">
+<meta property="og:title" content="风力发电基础">
+<meta property="og:url" content="http://yoursite.com/2020/07/10/windtoelec/index.html">
+<meta property="og:site_name" content="Mikezheng">
+<meta property="og:description" content="风力发电基础 风到底是怎么变成电的呢？最基本原理是利用风带动风车叶片进行转动，将风能转化为机械能，使用机械能带动风力发电机发电">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/betz.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windfirst.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/usewindpower.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/nomalwind.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zhenfeng.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/jianbianfeng.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/suijifeng.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zonghe.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/monibetz.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chuandong.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chilun.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chilunmoni.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/tongbudianji.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windzhengtii.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windphoto.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zonghewindphoto.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/jixiegonglvyuzhuanju.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/iiii.png">
+<meta property="article:published_time" content="2020-07-10T09:32:40.453Z">
+<meta property="article:modified_time" content="2020-07-10T09:33:14.579Z">
+<meta property="article:author" content="mikezheng">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Asmikezheng/photo/wind/betz.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/07/10/windtoelec/"/>
+
+
+
+
+
+  <title>风力发电基础 | Mikezheng</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mikezheng</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/10/windtoelec/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mikezheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mikezheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">风力发电基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-10T17:32:40+08:00">
+                2020-07-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/wind-power/" itemprop="url" rel="index">
+                    <span itemprop="name">wind_power</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="风力发电基础"><a href="#风力发电基础" class="headerlink" title="风力发电基础"></a>风力发电基础</h2><blockquote>
+<p><strong>风到底是怎么变成电的呢？</strong><br>最基本原理是利用风带动风车叶片进行转动，将风能转化为机械能，使用机械能带动风力发电机发电</p>
+</blockquote>
+<a id="more"></a>
+
+<p>[TOC]</p>
+<h3 id="风力发电基本原理"><a href="#风力发电基本原理" class="headerlink" title="风力发电基本原理"></a>风力发电基本原理</h3><p>风力发电机主要包含三部分</p>
+<ul>
+<li>风轮</li>
+<li>机舱</li>
+<li>塔杆</li>
+</ul>
+<p>大型与电网接驳的风力发电机的最常见的结构，是横轴式三叶片风轮，并安装在直立管状塔杆上。</p>
+<p>　　比较简单的风力发电机是采用<strong>固定速度</strong>的。通常采用两个不同的速度。即在弱风下用低速和在强风下用高速。这些定速风电机的感应式异步发电机能够直接发产生电网频率的交流电。</p>
+<p>　　比较新型的设计一般是<strong>可变速的</strong>(比如Vestas 公司的V52-850千瓦风电机转速为每分钟14转到每分钟31.4 转)。利用可变速操作，风轮的空气动力效率可以得到改善，从而提取更多的能量，而且在弱风情况下噪音更低。[^1]</p>
+<p><strong>所有风力发电机的功率输出是随着风力而变的。</strong></p>
+<p>强风下最常见的两种限制功率输出的方法(从而限制风轮所承受压力)</p>
+<ul>
+<li><p><strong>失速调节</strong>：使用失速调节的风电机，超过额定风速的强风会导致通过叶片的气流产生扰流，令风轮失速。当风力过强时，叶片尾部制动装置会动作，令风轮刹车。</p>
+</li>
+<li><p><strong>斜角调节</strong>：使用斜角调节的风电机，每片叶片能够以纵向为轴而旋转，叶片角度随着风速不同而转变，从而改变风轮的空气动力性能。当风力过强时，叶片转动至迎气边缘面向来风，从而令风轮刹车[^2]。</p>
+</li>
+</ul>
+<h3 id="风轮机理论"><a href="#风轮机理论" class="headerlink" title="风轮机理论"></a>风轮机理论</h3><p>风轮机是把风的动能变成机械能的重要部件，当风吹向桨叶时，桨叶上产生的气动力驱动风轮转动。其主要分为：</p>
+<ul>
+<li>水平轴风轮机</li>
+<li>垂直轴风轮机</li>
+<li>特殊风轮机</li>
+</ul>
+<h3 id="定浆距风力发电机组"><a href="#定浆距风力发电机组" class="headerlink" title="定浆距风力发电机组"></a>定浆距风力发电机组</h3><p><em>what</em>：风力机的功率调节完全依靠叶片的气动特性。<br><em>how</em>：桨叶与轮毂的连接是固定的，即当风速变化时，桨叶的迎风角度不能随之变化。风力机获得的功率随风速不停的变化[^3]。</p>
+<p>　　风电机组一般工作在小于额定风速时风轮机的转换效率Cp的最佳区段。当风速超过额定风速时，为了确保发电机输出功率恒定，通过叶片失速来降低Cp，来维持功率恒定。定浆距发电系统的发电机正常工作滑差小于1%，允许的滑差范围一般小于5%，但是风速变化范围却很大。下图为风轮机的典型Cp~λ特性曲线。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/betz.png" style="zoom:70%" ></div>
+
+<blockquote>
+<p>由上图可以看出风机功率系数是有极限的，也就是著名的betz极限。下面是其推导过程。</p>
+</blockquote>
+<h4 id="betz极限"><a href="#betz极限" class="headerlink" title="betz极限"></a>betz极限</h4><p>假设将通过风轮的空气从空气中分离出来当作孤立的事物来看待,那么就可以形成一个横截面为圆形的长的气流管。假定风轮是理想的，那么气流管中的空气质量和流量都相等。但由于气流管中的空气经叶轮后速度下降,且其质量不变，密度将减小，体积会变大，因此流管的横截面积将会发生膨胀[^4]。贝茨定律的极限是理论上最大的风能利用系数。</p>
+<p><strong>理想风轮</strong>：能全部接受风能并且没有轮毂，叶片是无限多，对气流没有任何阻力。而空气流是连续的，不可压缩的，叶片扫掠面上的气流是均匀的，气流速度的方向不论在叶片前或流经叶片后都是垂直叶片扫掠面的(或称为是平行风轮轴线的)[^5]。</p>
+<h5 id="假定条件"><a href="#假定条件" class="headerlink" title="假定条件"></a>假定条件</h5><p>普通气流理想化为平流，假定速度为$v_1$</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windfirst.png" style="zoom:50%" ></div>
+
+<p>在普通气流中加入理想风轮，由于速度会不突变，体积会变大，在横截面发生膨胀，因此通过理想风轮的末速度为$v_2$，通过风轮的瞬间速度为$v$，<strong>但是由于动能没有改变，那么在风通过理想风轮的瞬间是什么能量变成机械能了呢？</strong>实际上是压强发生了突然减小，使得风轮转动，因此设大气压强为$p$，通过风轮前的瞬间压强为$p_1$，通过风轮后的瞬间压强为$p_2$</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/usewindpower.png" style="zoom:40%" ></div>
+
+<p>同时设风车面积为$A$，空气密度为$\rho$，</p>
+<h5 id="推导方法一"><a href="#推导方法一" class="headerlink" title="推导方法一"></a>推导方法一</h5><p>叶片处单位时间内通过的风的质量$$M = \rho \times A \times \frac{v_1 + v_2}{2}$$</p>
+<p>由牛顿第二定律(牛顿：这还是我的管辖范围)风机的机械能等于初始动能减去最终动能，因此机械能为：$$P = \frac{1}{2} \times M \times (v_1 ^2 - v_2 ^2) $$</p>
+<p>将上式带入下式中得到$$P = \frac{ \rho }{2} \times A \times (v_1 ^2 - v_2 ^2)\frac{v_1 + v_2}{2} $$</p>
+<p>风能的基本计算公式为：$$P_0 = \frac{ \rho }{2} \times A \times v_1 ^3 $$</p>
+<p>所以经过化简可知$$ \frac{P}{P_0} = \frac{1}{2} \times [1 - (\frac{v_2}{v_1})^2] \times (1 + \frac{v_2}{v_1}) $$<br>此时可以得知为$\frac{v_2}{v_1} $的三次函数，通过求导求极限的方法得到$ \frac{1}{3} $和$-1$两个驻点，因为速度为正数所以当$ \frac{v_2}{v_1} = \frac{1}{3} $时，最大值为$ \frac{P}{P_0} = \frac{16}{27} \approx 59 $%</p>
+<h5 id="推导方法二"><a href="#推导方法二" class="headerlink" title="推导方法二"></a>推导方法二</h5><p>此方法主要通过压强到能量的计算来推导：由伯努利方程可知：$$p + \frac{1}{2}\rho v_1 ^2 = p_1 + \frac{1}{2}\rho v ^2$$<br>$$p + \frac{1}{2}\rho v_2 ^2 = p_2 + \frac{1}{2}\rho v ^2$$</p>
+<p>相减可得：<br>$$p_1 - p_2 =  \frac{1}{2}\rho (v_1 ^2 - v_2 ^2) $$</p>
+<p>伯努利方程本身为能量方程，因此计算动量变化率为：$$ A (p_1 - p_2) = \rho Q (v_1 - v_2) = \rho A v (v_1 - v_2) $$<br>所以$v = \frac{v_1 + v_2}{2}$</p>
+<p>因此当风车不存在的时候，单位时间通过A的气流动能为：$$A v_1 \times \frac{1}{2}\rho v_1 ^2 = \frac{ \rho }{2} \times A \times v_1 ^3$$</p>
+<p>风车存在的时候：$$A v (\frac{1}{2}\rho v_1 ^2 - \frac{1}{2}\rho v_2 ^2)$$</p>
+<p>上下两式子做比得到：<br>$$\frac{A v (\frac{1}{2}\rho v_1 ^2 - \frac{1}{2}\rho v_2 ^2)}{\frac{ \rho }{2} \times A \times v_1 ^3} = \frac{4v^2(v_1 - v)}{v_1 ^ 3 } $$</p>
+<p>将$v = \frac{v_1 + v_2}{2}$带入可知$v = \frac{2}{3} v_1$时效率最高。也可以得到betz极限为<strong>59%</strong></p>
+<h3 id="永磁同步发电机基本原理"><a href="#永磁同步发电机基本原理" class="headerlink" title="永磁同步发电机基本原理"></a>永磁同步发电机基本原理</h3><p>目前世界上的发电量几乎全部是由同步发电机发出，其即可以作为发电机运行，又可以作为电动机运行。功率因数可以调节，但是转速不可以调节。<br>基本原理[^6]</p>
+<h4 id="同步电机基础"><a href="#同步电机基础" class="headerlink" title="同步电机基础"></a>同步电机基础</h4><p>同步电机之所以叫同步电机，是因为其转速$n$和定子电流的频率$f_1$之间存在严格的确定的关系$$n = n_0 = \frac{60 f_1}{p}$$<br>其中$n_0$是同步转速。而异步电机在稳定运行的时候其转速不等于同步转速。</p>
+<p>出现区别的原因是由<strong>两者转子中的电流中的性质不同</strong>所导致的。异步电机稳态运行时，其转子转速为$n$，转子电流频率$f_2 = sf_1$，转速差为$s = \frac {n_0 - n}{n_0}$，如果转子的转速和定子的旋转磁场的转速是相同的，那么$s= 0$，则转子电流频率$f_2 = 0$，这意味着转子绕组内的电流是直流电流。</p>
+<p>如果改变异步电机的转子结构，使它成为用直流电流励磁，且可以转动的电磁铁，这样的交流电机便是同步电机。</p>
+<h4 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h4><p>其主要由定子和转子组成。</p>
+<ul>
+<li>定子：</li>
+</ul>
+<p><em>what</em>：由导磁的定子铁心和导电的三相绕组以及固定铁心用的基座和端盖等部件组成。<br><em>how</em>：可以输入输出电功率，并且产生旋转磁场。</p>
+<ul>
+<li>转子：</li>
+</ul>
+<p><em>what</em>：一种是有明显磁极的凸极式，一个是在圆柱体上开一些槽，没有明显磁极的隐极式。主要由磁极，磁轭，励磁绕组，转子支架，轴以及集电环等部件组成。<br><em>how</em>：通过励磁电流以后的相邻磁极的极性呈N与S交替排列，励磁绕组两个出线端接在两个集电环上，通过与集电环相接触的静止电刷向外引出。</p>
+<h4 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h4><p><strong>根本基于电磁感应定律</strong></p>
+<p><strong>空载特性</strong>：当同步发电机的直流电流励磁的转子由原动机拖动到同步转速$n_0$时，定子上静止开路的三相绕组(也称电枢绕组)，与旋转转子上的磁极在空隙中所建立旋转磁场相对运动，定子绕组磁链发生变化。</p>
+<p>根据电磁感应定律，定子绕组内由此感应产生感应电动势$E_0$(称为励磁电动势)。改变励磁电流$I_f$的大小可相应的改变励磁电动势$E_0$的大小。此时同步电机作发电机运行而呈空载状态。在同步转速下，励磁电动势$E_0$与励磁电流$I_f$的关系即为同步电机作为发电机的空载特性。</p>
+<p>那么是怎么发电的呢？实际上在空载运行的时候其端电压$U_0 = E_0$，在定子绕组上接上对称负载，同步电动机出于负载运行状态，此时原动机（比如本文中所提到的风轮机）向发电机输入机械功率，发电机从定子绕组输出电功率，经过机电能量转换，产生电能。</p>
+<h3 id="风力发电建模"><a href="#风力发电建模" class="headerlink" title="风力发电建模"></a>风力发电建模</h3><blockquote>
+<p><strong>风到底是怎么变成电的呢？</strong>下边这个模型可以窥探一二。</p>
+</blockquote>
+<h4 id="风速模型"><a href="#风速模型" class="headerlink" title="风速模型"></a>风速模型</h4><p>因为风具有随机性和间歇性的特点，因此风速模型一般采用四分量叠加法，即：$v = v_b + v_g + v_r + v_t $，为基本风，阵风，渐变风和随机风[^7]。</p>
+<ul>
+<li>基本风：常用的确定基本风速的概率分布为威布尔分布和瑞利分布，而基本风的分布本质上是正偏态分布，这时候使用威布尔分布模拟在实际测量中拟合效果好。同时在这个公式中可以看到，当k=1时为指数分布，k=2时为瑞利分布。$$v_b = A \Gamma  (1 + \frac{1}{k})$$</li>
+</ul>
+<p>其中尺寸参数A和形状参数k可根据风电场的实测数据估算。下图左为基本风变化曲线，图右为仿真模型。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/nomalwind.png" style="zoom:70%" ></div>
+　
+- 阵风：描述风速突然变化的特性，通常用来分析风电系统对电网电压波动的影响。
+
+<p>$$v_g = \left{\begin{matrix}0   , t&lt;T_1\ \frac{v_{g max}}{2}[1 - cos(2 \pi \cdot \frac {t - T_1}{T_g})],T_1 \leq t \leq T_1 + T_g \ 0,t &gt; T_1 + T_g\end{matrix}\right.$$</p>
+<p>其中$v_g$为阵风风速，$v_{g max}$为阵风峰值，$T_1$为阵风开始时间，$T_g$为阵风周期。下图左为阵风风速随时间变化曲线，图右为仿真模型，设$v_{gmax} = 6m/s$，$T_1 = 0.03s$，$T_g = 0.05s$。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zhenfeng.png" style="zoom:100%" ></div>
+
+<ul>
+<li>渐变风：顾名思义，渐变的特性</li>
+</ul>
+<p>$$v_g = \left{\begin{matrix}0   , t&lt;T_{r1}, t&gt;T_{r2} + T\ v_{rmax} \frac{t-T_{r1}}{T_{r2}-T_{r1}}, T_{r1} \leq t \leq T_{r2} \ v_{rmax},T_{r2}&lt; t &lt; T_{r2} + T \end{matrix}\right.$$</p>
+<p>式中，$v_r$为渐变风速，$V_{rmax}$为渐变风峰值，T为渐变风持续时间，$T_{r1}$为渐变风启动时间，$T_{r2}$为渐变风结束时间。下图左为渐变风风速随时间变化曲线，图右为仿真模型，设$v_{rmax} = 6m/s$，$T_1 = 0.04s$，$T_g = 0.05s$。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/jianbianfeng.png" style="zoom:100%" ></div>
+
+<ul>
+<li>随机风：描述特定高度上风速变化的随机特性：$$v_t = v_{tmax}R_{andom}(-1,1)cos(\omega_v + \phi_v)$$</li>
+</ul>
+<p>式中$v_{tmax}$为最大随机风速，$R_{andom}$为-1到1之间均匀分布的随机变量，$\omega_v$为风速波动的平均距离，$ \phi_v$为$0 - 2 \pi$之间服从均匀概率分布的随机量，下图为仿真模型。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/suijifeng.png" style="zoom:60%" ></div>
+
+<p>综合模型为：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zonghe.png" style="zoom:60%" ></div>
+
+<h4 id="风力发电机组的启动模型"><a href="#风力发电机组的启动模型" class="headerlink" title="风力发电机组的启动模型"></a>风力发电机组的启动模型</h4><p>在风轮机的启动模型中，就存在上文所说到的betz极限的应用，风轮机的功率系数$C_p$与叶尖速比$\lambda$和叶片桨距角$\beta$有关$$C_p = 0.5(\frac{rC_f}{\lambda}-0.022 \beta - 2)e^{-0.255 \frac{rC_f}{\lambda}}$$<br>式中$C_f$为叶片设计常数，取3，r取12。由上文可知，某一确定的桨距角$\beta$，$C_p$有一极大值存在，因此在风力机运行的时候不能保证酥油的风速下都能产生最大的功率输出。$C_p$的仿真模型如下所示。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/monibetz.png" style="zoom:60%" ></div>
+
+<p>一台风轮半径为R的风轮机，当风速为v的时候，其产生的机械功率和机械转矩分别为：</p>
+<p>$$P_m = \frac{1}{2} \rho \pi R^2 C_p(\beta,\lambda) v^3$$<br>$$T_m = \frac{P_m}{\omega} = \frac{1}{2} \rho \pi R^3 C_p(\beta,\lambda) \frac{v^2}{\lambda}$$</p>
+<p>其中叶尖速比$\lambda = \frac{\omega R}{v}$，$\rho$为空气密度，即在常温下，为1.205$kg/m^3$，$\omega$为叶片旋转速度，实际上为15r/min–20r/min，仿真时取后者。因此风力仿真模型为：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chuandong.png" style="zoom:60%" ></div>
+
+<h4 id="传动齿轮模型"><a href="#传动齿轮模型" class="headerlink" title="传动齿轮模型"></a>传动齿轮模型</h4><p>风力发电传动系统的作用是把原动部分的运动转变为执行部分所需的机械动作，即把风通过风力机所产生的气动转矩变为发电机侧的机械转矩。</p>
+<p>因此传动系统是能量传输的纽带，同时传动系统的运动取决于驱动力及阻力的特性。忽略转轴的倔强系数、阻尼因数，可知风力机转轴到发电机转子之间的机械传动部分的数学方程为:</p>
+<p>$$T_{\omega t} - T_{ls} = J_{\omega t} \frac{d \omega_t}{dt}$$<br>$$ T_{ls} = K_g  T_{hs}$$</p>
+<p>其中$J_{\omega t}$，$\omega$分别为风机的转动惯量和机械转速，$ T_{ls} ,T_{hs}$分别是经过传动齿轮低速轴和高速轴上的机械转矩，$K_g$为齿轮箱的变比。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chilun.png" style="zoom:50%" ></div>
+
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/chilunmoni.png" style="zoom:70%" ></div>
+
+<h4 id="三相同步发电机模型"><a href="#三相同步发电机模型" class="headerlink" title="三相同步发电机模型"></a>三相同步发电机模型</h4><p>本文所使用的的发电机模块是simulink中的PMSM模块，其中集成了传动模型和感应电机模型</p>
+<ul>
+<li>传动模型：当气动转矩$T_a$和电磁转矩$T_e$发生变化时，风力发电机风轮机转子将加速或减速运行，对于直驱型永磁同步发电机而言，假设转子和电机之间为刚性连接则</li>
+</ul>
+<p>$$J_{eq} \frac {d \omega _m}{d t} = T_a - T_t - T_e$$</p>
+<p>式中$T_l = B_m \cdot \omega <em>m$为传动损失，$B_m$为转动粘滞系数，$J</em>{eq} = J_r+ J_g$为机组等效转动惯量，$J_r ，J_g$分别为风轮机和电机的传动惯量。</p>
+<ul>
+<li>感应电机模型：本文中的永磁同步发电机是基于$d_q$旋转坐标轴建立起的数学模型</li>
+</ul>
+<p>$$\left{\begin{matrix} \frac{di_d}{dt} =  \frac{u_d}{L_d} -  \frac{Ri_d}{L_d} + \frac{L_q}{L_d}n_p \omega _m i_q \ \frac{di_q}{dt} + \frac{u_q}{L_q} =  \frac{Ri_q}{L_q} + \frac{L_d}{L_q}n_p \omega _m i_d - \frac{\lambda n_p \omega _m}{L_q}\end{matrix}\right.$$</p>
+<p>式中$i_d$和$i_q$分别为发电机的d轴和q轴电流，$L_d$和$L_q$分别为发电机的d轴和q轴电感，$u_d$和$u_q$分别为电压源d轴和q轴分量，R为定子电阻，$\omega _m$为转子的机械角速度，$n_p$为发电机转子极对数，$\lambda$为永磁体磁链。</p>
+<p>PMSM的电磁转矩表达式为：$$T_e = 1.5n_p i_q [(L_d-L_q)i_d + \lambda]$$</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/tongbudianji.png" style="zoom:50%" ></div>
+
+<p>其中需要注意的是，在使用<strong>PMSM</strong>模块的时候需要加上<strong>powergui</strong>模块在旁边，并且什么都不用连接才不会报错，其次是本文中的<strong>PMSM</strong>模块的驱动电路为三相逆变桥，驱动电压为100V的直流电压[^8]。</p>
+<h4 id="整体建模结构图"><a href="#整体建模结构图" class="headerlink" title="整体建模结构图"></a>整体建模结构图</h4><div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windzhengtii.png" style="zoom:100%" ></div>
+
+<h3 id="结果与总结"><a href="#结果与总结" class="headerlink" title="结果与总结"></a>结果与总结</h3><p>下图中分别为基本风，阵风，渐变风和随机风的示波器显示图像。</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/windphoto.png" style="zoom:100%" ></div>
+
+<p>综合风速图如下所示：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/zonghewindphoto.png" style="zoom:50%" ></div>
+
+<p>风力机输出的机械功率和机械转矩如下所示：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/jixiegonglvyuzhuanju.png" style="zoom:60%" ></div>
+
+<p>三相电流输出如下所示：</p>
+<div  align="center"> <img src="https://raw.githubusercontent.com/Asmikezheng/photo/wind/iiii.png" style="zoom:30%" ></div>
+
+<hr>
+<p>本文在模拟的时候虽然能在一定程度上反应风能是如何变为三相电的，但是还是有很多的不足。</p>
+<ul>
+<li>只考虑到了能量的传递没有考虑到能量的损耗，并且本文中只是定浆距角进行讨论，实际上桨距角会随着风向风速的变化而发生变化。</li>
+<li>最终结果是三相电流，并没有模拟风力发电塔基座的变压器等结构，实际上还要经过一些步骤与转换才能正式接入三相电网为千家万户供电。</li>
+</ul>
+<hr>
+<p>[^1]: 夏辑. 高油价下新能源与节能技术研发趋势[J]. 安徽科技,2008,(8):4-8</p>
+<p>[^2]: 耿华,杨耕,马小亮等. 并网型风力发电机组的控制技术综述[J]. 电力电子技术, 2006, 40(6): 33-36</p>
+<p>[^3]: 付海涛. 变速恒频风力发电系统的建模与仿真研究[D]. 华中科技大学, 2005.</p>
+<p>[^4]: Betz, A. (1966) Introduction to the Theory of Flow Machines. (D. G. Randall, Trans.) Oxford: Pergamon Press.</p>
+<p>[^5]: 钱杰. 低风速小型永磁风力发电机叶片及支承的研究与设计[D].武汉理工大学,2010.</p>
+<p>[^6]: 王岩. 电机及拖动基础. [M]. 清华大学出版社, 2012.6</p>
+<p>[^7]: 唐钱江, 韩春成, 王萍, 王立地. 离网小型风力发电系统的建模与仿真[J]. 电网与清洁能源, 2012, 28(3): 74-78</p>
+<p>[^8]: 袁雷. 现代永磁同步电机控制原理及MATLAB仿真. [M]. 北京航空航天大学出版社. 2016.4</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="mikezheng 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="mikezheng 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/01/java002/" rel="next" title="Java学习笔记">
+                <i class="fa fa-chevron-left"></i> Java学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/user.jpg"
+                alt="mikezheng" />
+            
+              <p class="site-author-name" itemprop="name">mikezheng</p>
+              <p class="site-description motion-element" itemprop="description">拾贝者</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#风力发电基础"><span class="nav-text">风力发电基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#风力发电基本原理"><span class="nav-text">风力发电基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#风轮机理论"><span class="nav-text">风轮机理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定浆距风力发电机组"><span class="nav-text">定浆距风力发电机组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#betz极限"><span class="nav-text">betz极限</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#假定条件"><span class="nav-text">假定条件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#推导方法一"><span class="nav-text">推导方法一</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#推导方法二"><span class="nav-text">推导方法二</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#永磁同步发电机基本原理"><span class="nav-text">永磁同步发电机基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#同步电机基础"><span class="nav-text">同步电机基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本结构"><span class="nav-text">基本结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工作原理"><span class="nav-text">工作原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#风力发电建模"><span class="nav-text">风力发电建模</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#风速模型"><span class="nav-text">风速模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#风力发电机组的启动模型"><span class="nav-text">风力发电机组的启动模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传动齿轮模型"><span class="nav-text">传动齿轮模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三相同步发电机模型"><span class="nav-text">三相同步发电机模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整体建模结构图"><span class="nav-text">整体建模结构图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果与总结"><span class="nav-text">结果与总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mikezheng</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共13.3k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
